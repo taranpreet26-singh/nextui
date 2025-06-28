@@ -21,7 +21,6 @@ export default function ScreenWithImage() {
 
   const isLg = width >= 1024;
   const isMd = width >= 768 && width < 1024;
-  const isSm = width < 768;
 
   const transform = useTransform(
     scrollYProgress,

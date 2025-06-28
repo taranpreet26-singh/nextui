@@ -5,7 +5,6 @@ import {
   motion,
   useMotionValueEvent,
   useScroll,
-  useTransform,
 } from "framer-motion";
 import { MoonIcon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
@@ -18,8 +17,6 @@ export default function Navbar() {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
-  const translateY = useTransform(scrollY, [0, 30], ["0px", "10px"]);
-  const width = useTransform(scrollY, [0, 30], ["100%", "90%"]);
   const navItems = ["Pricing", "Blog", "Contact"];
   const [hovered, setHover] = useState<number | null>(null);
 

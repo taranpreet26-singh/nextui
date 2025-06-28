@@ -1,6 +1,5 @@
 "use client"
 import { easeInOut, motion } from "framer-motion"
-import { ReceiptText } from "lucide-react"
 import { JSX } from "react"
 
 type itemType = {

@@ -2,12 +2,6 @@
 import { easeInOut, motion } from "framer-motion";
 import Image from "next/image";
 
-const logos = [
-  "/logos/netflix.png",
-  "/logos/google.webp",
-  "/logos/meta.png",
-  "/logos/onlyfans.png",
-];
 
 export default function LogoMarquee() {
   const doubledLogos = {

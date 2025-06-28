@@ -8,7 +8,7 @@ import {
   stagger,
   useInView,
 } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Skeleton } from "./ui/skeleton";
 
 export type features = {

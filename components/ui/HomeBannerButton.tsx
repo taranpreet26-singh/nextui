@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, } from "lucide-react";
 
 export default function HomeBannerButoon() {
 
