@@ -1,103 +1,84 @@
-import Image from "next/image";
+import CardsSection from "@/components/CardsSection";
+import CarouselSection from "@/components/CarouselSection";
+import ProjectFullSectionUI from "@/components/ProjectExamples";
+import ScreenWithImage from "@/components/ScreenWithImage";
+import HomeBannerButoon from "@/components/ui/HomeBannerButton";
+import HoverButton, { ButtonBorder } from "@/components/ui/HoverButton";
+import { ArrowRight } from "lucide-react";
 
+export type features = {
+  title: string,
+  info: string,
+  videoLink?: string,
+}[]
 export default function Home() {
+  const features: features = [
+    {
+      title: "Compare quotes 10 times faster with zero coverage gaps",
+      info: "Vantel reads every line in seconds, ranks quotes by client favorability and slashes E&O exposure",
+      videoLink: "https://framerusercontent.com/assets/lwJryAp9GuwcWU9P4ObVG7jIsJI.mp4"
+    },
+    {
+      title: "Review contracts and subcontractor agreements in seconds",
+      info: "Instantly cross-check requirements against policies, surface missing coverages and respond to clients the same day",
+      videoLink: "https://framerusercontent.com/assets/2Z8lkkIgN2bjbs8AZBJzJWJpkc.mp4"
+    }
+  ]
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="relative h-screen flex">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <main className="relative container mx-auto  mt-20 z-1">
+        <div className="w-full flex flex-col items-center justify-center pt-24">
+          <div>
+            <HomeBannerButoon />
+          </div>
+          <div className="text-center  w-3/4 pt-6 font-sans ">
+            <h1 className="text-4xl lg:text-7xl font-extrabold text-black dark:text-white">Transform policy analysis with AI for brokers</h1>
+            <p className="text-lg lg:text-2xl font-semibold  px-5 lg:px-16 pt-4 text-neutral-600/80 dark:text-neutral-600/80">Save 15 hours every week, minimize errors and omissions exposure, and experience measurable ROI within 3 weeks — all powered by compliant, broker-friendly AI solutions.</p>
+          </div>
+          <div className="flex gap-6 pt-6 items-center">
+            <ButtonBorder className="text-sm text-white px-6 py-2 ">
+              Get Started
+            </ButtonBorder>
+
+            <HoverButton className="flex items-center py-2 gap-2 group dark:text-white  text-black hover:text-white">
+              Contact Us <ArrowRight width={12} className="group-hover:translate-x-1 transition-all duration-700 ease-in-out" />
+            </HoverButton>
+          </div>
+
         </div>
+
+        <ScreenWithImage />
+        <CarouselSection />
+        {
+          features.map((element, index) => {
+            return <ProjectFullSectionUI key={index} features={element} />
+          })
+        }
+
+
+        <CardsSection />
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+      <div className="absolute inset-0 z-0  flex [mask-image:radial-gradient(circle_at_center,white_0%,white_45%,transparent_70%)]">
+        {
+          [...Array(40)].map((element, index) => {
+            return <div key={index} className="h-full w-20 bg-gradient-to-r from-neutral-100 to-white shadow-[2px_0px_0px_0px_var(--color-neutral-400)] dark:from-neutral-900 dark:to-neutral-950 dark:shadow-[2px_0px_0px_0px_var(--color-neutral-800)]">
+            </div>
+          })
+        }
+      </div>
     </div>
   );
 }
