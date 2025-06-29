@@ -45,7 +45,7 @@ export default function ProjectFullSectionUI({
     );
   };
 
-  const translateY = useTransform(scrollYProgress, [0, 1], [600, -400]);
+  const translateY = useTransform(scrollYProgress, [0, 1], [500, -400]);
   const opacity = useTransform(scrollYProgress, [0, 0.5,0.5, 1], [0, 1,1, 0]);
   const blur = useTransform(scrollYProgress, [0, 0.5,0.5, 1], [5, 0,0, 5]);
   const scale = useTransform(scrollYProgress, [0, 0.5,0.5, 1], [0.7, 1,1, 0.7]);

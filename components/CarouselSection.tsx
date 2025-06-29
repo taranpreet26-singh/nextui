@@ -18,7 +18,7 @@ export default function LogoMarquee() {
   const repeatedLogos = Array.from({ length: 52 }).flatMap(() => doubledLogos.primaryCompanies);
 
   return (
-    <section className="overflow-hidden py-24 lg:py-30 ">
+    <section className="overflow-hidden py-20 lg:py-30 ">
       <div className="text-center mx-auto w-11/12 sm:w-4/5 lg:w-3/4 pt-6 lg:pt-10 font-sans">
         <h1 className="text-xl sm:text-3xl lg:text-7xl font-extrabold text-black dark:text-white">
           Trusted by the best companies
@@ -50,7 +50,7 @@ export default function LogoMarquee() {
                 src={element}
                 width={200}
                 height={100}
-                className="mx-4 sm:mx-6 lg:mx-8 w-[100px] sm:w-[140px] lg:w-[200px] object-contain invert filter grayscale transition duration-300"
+                className="mx-4 sm:mx-6 lg:mx-8  object-contain invert filter grayscale transition duration-300"
               />
             </motion.div>
           ))}

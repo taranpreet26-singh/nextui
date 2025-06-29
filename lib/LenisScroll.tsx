@@ -1,15 +1,19 @@
 "use client"
 import Lenis from "lenis"
 import { useEffect, useState } from "react"
+import { TimerOptions } from "timers"
 
 export default function LenisScroller({children}:{children:React.ReactNode}){
      const [,setLenis] = useState<Lenis | null>(null)
       const [,setRafState] = useState<number | null>(null)
         useEffect(()=>{
-          const scroller = new Lenis()
+          const scroller = new Lenis({
+            duration:2,
+            smoothWheel:true
+          })
           
       
-          function ref(time:any){
+          function ref(time:number){
             scroller.raf(time)
             requestAnimationFrame(ref)
           }

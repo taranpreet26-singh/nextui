@@ -1,6 +1,5 @@
 import CardsSection from "@/components/CardsSection";
 import CarouselSection from "@/components/CarouselSection";
-import ProjectFullSectionUI from "@/components/ProjectExamples";
 import ProjectSection from "@/components/ProjectSection";
 import ScreenWithImage from "@/components/ScreenWithImage";
 import HomeBannerButoon from "@/components/ui/HomeBannerButton";

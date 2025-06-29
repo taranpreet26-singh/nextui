@@ -21,7 +21,7 @@ export default function ScreenWithImage() {
 
   const isLg = width >= 1024;
 
-  const transform = useTransform(scrollYProgress,[0, 0.5],isLg? ["-250px", "100px"]: ["-120px", "40px"]);
+  const transform = useTransform(scrollYProgress,[0, 1],["0px", "100px"]);
   const rotateX = useTransform(scrollYProgress,[0, 0.5],isLg? ["45deg", "0deg"]: ["15deg", "0deg"]);
   const scale = useTransform(scrollYProgress,[0, 0.5],isLg? [0.9, 1]: [1, 1]);
   return (

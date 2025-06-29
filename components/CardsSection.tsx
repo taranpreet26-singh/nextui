@@ -32,7 +32,8 @@ export default function CardsSection() {
 
     const [hovered, setHovered] = useState<number | null>(null)
 
-    return <section className="py-10 lg:py-20 px-6 lg:px-30">
+    return <motion.section 
+    className="py-10 lg:py-20 px-6 lg:px-30 ">
         <div className="grid grid-cols-1  w-full h-full  relative  lg:grid-cols-3 ">
 
             {
@@ -52,5 +53,5 @@ export default function CardsSection() {
 
         </div>
 
-    </section>
+    </motion.section>
 }
