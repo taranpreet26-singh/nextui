@@ -48,6 +48,6 @@ export default function Footer() {
         </div>
         </div>
 
-        <h1  className="text-7xl absolute inset-x-0 mx-auto bottom-6 lg:bottom-10 lg:text-[14rem] bg-clip-text bg-linear-to-b text-transparent from-neutral-700 to-white text-center mt-0 lg:mt-10 font-extrabold font-sans">VENTEL AI</h1>
+        <h1  className="text-7xl absolute inset-x-0 mx-auto bottom-6 lg:bottom-10 lg:text-[14rem] bg-clip-text bg-linear-to-b text-transparent from-neutral-700 to-white text-center mt-8 lg:mt-10 font-extrabold font-sans">VENTEL AI</h1>
     </footer>
 }
