@@ -1,29 +1,15 @@
 import CardsSection from "@/components/CardsSection";
 import CarouselSection from "@/components/CarouselSection";
 import ProjectFullSectionUI from "@/components/ProjectExamples";
+import ProjectSection from "@/components/ProjectSection";
 import ScreenWithImage from "@/components/ScreenWithImage";
 import HomeBannerButoon from "@/components/ui/HomeBannerButton";
 import HoverButton, { ButtonBorder } from "@/components/ui/HoverButton";
 import { ArrowRight } from "lucide-react";
 
-export type features = {
-  title: string,
-  info: string,
-  videoLink?: string,
-}[]
+
 export default function Home() {
-  const features: features = [
-    {
-      title: "Compare quotes 10 times faster with zero coverage gaps",
-      info: "Vantel reads every line in seconds, ranks quotes by client favorability and slashes E&O exposure",
-      videoLink: "https://framerusercontent.com/assets/lwJryAp9GuwcWU9P4ObVG7jIsJI.mp4"
-    },
-    {
-      title: "Review contracts and subcontractor agreements in seconds",
-      info: "Instantly cross-check requirements against policies, surface missing coverages and respond to clients the same day",
-      videoLink: "https://framerusercontent.com/assets/2Z8lkkIgN2bjbs8AZBJzJWJpkc.mp4"
-    }
-  ]
+
   return (
     <div className="relative h-screen flex">
 
@@ -47,16 +33,9 @@ export default function Home() {
           </div>
 
         </div>
-
         <ScreenWithImage />
         <CarouselSection />
-        {
-          features.map((element, index) => {
-            return <ProjectFullSectionUI key={index} features={element} />
-          })
-        }
-
-
+        <ProjectSection/>
         <CardsSection />
       </main>
 

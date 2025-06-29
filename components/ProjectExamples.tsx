@@ -46,9 +46,9 @@ export default function ProjectFullSectionUI({
   };
 
   const translateY = useTransform(scrollYProgress, [0, 1], [600, -400]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0]);
-  const blur = useTransform(scrollYProgress, [0, 0.5, 1], [10, 0, 10]);
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.7, 1, 0.7]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5,0.5, 1], [0, 1,1, 0]);
+  const blur = useTransform(scrollYProgress, [0, 0.5,0.5, 1], [5, 0,0, 5]);
+  const scale = useTransform(scrollYProgress, [0, 0.5,0.5, 1], [0.7, 1,1, 0.7]);
   const isInView = useInView(ref, { amount: 0.3 });
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function ProjectFullSectionUI({
   return (
     <div
       ref={ref}
-      className="px-4 sm:px-6 lg:px-30 flex flex-col lg:flex-row justify-center items-center  lg:gap-10 w-full h-fit py-16 lg:py-20"
+      className="px-4 sm:px-6 lg:px-30 flex overflow-hidden flex-col lg:flex-row justify-center items-center  lg:gap-8 w-full h-full py-16 lg:py-40"
     >
       <motion.div
         ref={pointerAnimator}
@@ -68,10 +68,14 @@ export default function ProjectFullSectionUI({
           filter: useMotionTemplate`blur(${blur}px)`,
           scale: scale,
         }}
-        className="flex flex-col w-full lg:w-[50%] pt-6 lg:pt-12 justify-center items-start gap-5"
+        className="flex flex-col w-full lg:w-[40%] pt-6 lg:pt-12 justify-center items-start gap-5"
       >
-        <h1 className="text-xl sm:text-2xl lg:text-4xl font-extrabold">
-          {features?.title || (
+        <h1 className="text-xl sm:text-2xl flex flex-wrap lg:text-3xl font-extrabold">
+          {features?.title.split(" ").map((word,index)=>{
+            return <motion.p className="" key={index} style={{opacity:0,filter:"blur(5px)",y:10}}>
+              {word}&nbsp;
+            </motion.p>
+          }) || (
             <div>
               <Skeleton className="h-4 w-[250px] bg-neutral-700 dark:bg-neutral-400" />
             </div>
@@ -101,7 +105,7 @@ export default function ProjectFullSectionUI({
 
       <motion.div
         style={{ y: translateY, opacity: opacity }}
-        className="bg-neutral-700 p-3 sm:p-4 mx-auto w-full z-[1] h-fit rounded-2xl border border-neutral-700"
+        className="bg-neutral-700 p-3 sm:p-4 mx-auto w-full lg:w-[60%] z-[1] h-fit rounded-2xl border border-neutral-700"
       >
         <div className="bg-white dark:bg-black w-full h-full p-3 sm:p-4 z-[2] rounded-3xl border border-neutral-700">
           <video
