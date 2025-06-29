@@ -27,7 +27,7 @@ export default function Footer() {
                     })
                 }
             </div>
-            <div className="w-full h-full">
+            <div className="w-full flex flex-col items-center h-full">
                 {
                     policies.map((element,index)=>{
                         return <li key={index} className="text-sm mt-2 list-none text-neutral-400 hover:text-neutral-600 transition-all duration-700 ease-in-out">
@@ -36,7 +36,7 @@ export default function Footer() {
                     })
                 }
             </div>
-            <div className="w-full h-full">
+            <div className="w-full flex flex-col items-end h-full">
                 {
                     socialMedia.map((element,index)=>{
                         return <li key={index} className="text-sm mt-2 list-none text-neutral-400 hover:text-neutral-600 transition-all duration-700 ease-in-out">
@@ -48,6 +48,6 @@ export default function Footer() {
         </div>
         </div>
 
-        <h1  className="text-7xl lg:text-[14rem] bg-clip-text bg-linear-to-b text-transparent from-neutral-700 to-white text-center mt-20 lg:mt-30 font-extrabold font-sans">VENTEL AI</h1>
+        <h1  className="text-5xl lg:text-[14rem] bg-clip-text bg-linear-to-b text-transparent from-neutral-700 to-white text-center mt-20 lg:mt-30 font-extrabold font-sans">VENTEL AI</h1>
     </footer>
 }
