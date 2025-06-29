@@ -2,8 +2,10 @@ import CardsSection from "@/components/CardsSection";
 import CarouselSection from "@/components/CarouselSection";
 import ProjectSection from "@/components/ProjectSection";
 import ScreenWithImage from "@/components/ScreenWithImage";
+import SecuritySectionAds from "@/components/SecuritySectionAds";
 import HomeBannerButoon from "@/components/ui/HomeBannerButton";
 import HoverButton, { ButtonBorder } from "@/components/ui/HoverButton";
+import UserSectionAdvertisment from "@/components/UserSectionAdvertisment";
 import { ArrowRight } from "lucide-react";
 
 
@@ -36,7 +38,10 @@ export default function Home() {
         <CarouselSection />
         <ProjectSection/>
         <CardsSection />
+        <SecuritySectionAds/>
+        <UserSectionAdvertisment/>
       </main>
+
 
 
 

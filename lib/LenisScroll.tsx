@@ -1,7 +1,6 @@
 "use client"
 import Lenis from "lenis"
 import { useEffect, useState } from "react"
-import { TimerOptions } from "timers"
 
 export default function LenisScroller({children}:{children:React.ReactNode}){
      const [,setLenis] = useState<Lenis | null>(null)
@@ -11,6 +10,7 @@ export default function LenisScroller({children}:{children:React.ReactNode}){
             duration:2,
             smoothWheel:true
           })
+          
           
       
           function ref(time:number){
