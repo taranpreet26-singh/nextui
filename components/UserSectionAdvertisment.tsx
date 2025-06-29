@@ -24,22 +24,22 @@ export default function UserSectionAdvertisment() {
                 </HoverButton>
             </div>
             <div
-                className="flex absolute mx-auto pl-0 lg:pl-10 z-[-1] inset-0 gap-4 w-full h-full  rounded-2xl  overflow-hidden">
+                className="flex absolute mx-auto  z-[-1] inset-0 gap-4  w-full h-full  rounded-2xl  overflow-hidden">
                 {
                     [...Array(32)].map((_, index) => {
                         return (
                             <div key={index} className="w-full flex flex-col gap-6 h-full">
                                 {
-                                    [...Array(15)].map((element, idx) => {
+                                    [...Array(16)].map((element, idx) => {
                                         const delay = 0.04 * (index * 10 + idx)
                                         return <motion.div
                                             initial={{ backgroundColor: "#888888" }}
                                             animate={{
                                                 backgroundColor: hovered ? "#f6f6f6" : "#888888",
-                                                boxShadow: hovered ? "2px 2px 4px 1px rgba(225,225,225,1)" : "2px 2px 6px 1px rgba(225,225,225,0.5)"
+                                                boxShadow: hovered ? "2px 2px 4px 1px rgba(225,225,225,1)" : "2px 2px 6px 1px rgba(225,225,225,0.2)"
                                             }}
                                             transition={{ duration: 0.7, ease: easeInOut, delay: delay }}
-                                            key={idx} className={`w-[2px] h-[2px]  rounded-full`}>
+                                            key={idx} className={`w-[3px] h-[3px]  rounded-full`}>
                                         </motion.div>
                                     })
                                 }

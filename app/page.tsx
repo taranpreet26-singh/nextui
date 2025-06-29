@@ -1,5 +1,6 @@
 import CardsSection from "@/components/CardsSection";
 import CarouselSection from "@/components/CarouselSection";
+import Footer from "@/components/Footer";
 import ProjectSection from "@/components/ProjectSection";
 import ScreenWithImage from "@/components/ScreenWithImage";
 import SecuritySectionAds from "@/components/SecuritySectionAds";
@@ -40,6 +41,7 @@ export default function Home() {
         <CardsSection />
         <SecuritySectionAds/>
         <UserSectionAdvertisment/>
+        <Footer/>
       </main>
 
 
