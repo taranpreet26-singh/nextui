@@ -1,5 +1,6 @@
 "use client";
 import { useScroll, useTransform, motion } from "framer-motion";
+import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 
 export default function ScreenWithImage() {
@@ -35,13 +36,7 @@ export default function ScreenWithImage() {
         className="bg-neutral-700 p-2 sm:p-4 mx-auto relative top-0 w-full  z-[1] h-fit rounded-2xl border border-neutral-700"
       >
         <div className="bg-white dark:bg-black w-full h-full p-2 sm:p-4 z-[2] rounded-3xl border border-neutral-700">
-          <video
-            src="https://framerusercontent.com/assets/lwJryAp9GuwcWU9P4ObVG7jIsJI.mp4"
-            autoPlay
-            muted
-            playsInline
-            className="rounded-2xl border border-neutral-700 w-full h-auto max-h-[80vh] object-cover"
-          />
+          <Image width={4000} height={100} alt="header-img" className="rounded-3xl" src={'/images/header.webp'} />
         </div>
       </motion.div>
 
