@@ -56,7 +56,7 @@ export default function Navbar() {
                         src={"/images/ventel-logo.avif"}
                     />
                     <h1 className="text-lg md:text-2xl font-bold text-blue-900 font-sans">
-                        Ventel
+                        Idler
                     </h1>
                 </div>
 

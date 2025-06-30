@@ -14,7 +14,7 @@ export default function Footer() {
                 src={"/images/ventel-logo.avif"}
                 />
             <h1 className="text-lg md:text-3xl font-bold text-blue-900 font-sans">
-                Ventel
+                Idler
             </h1>
         </div>
         <div className="grid grid-cols-3 justify-end  w-full lg:w-1/2  ">
@@ -48,6 +48,6 @@ export default function Footer() {
         </div>
         </div>
 
-        <h1  className="text-5xl lg:text-[14rem] bg-clip-text bg-linear-to-b text-transparent from-neutral-700 to-white text-center mt-20 lg:mt-30 font-extrabold font-sans">VENTEL AI</h1>
+        <h1  className="text-5xl lg:text-[14rem] bg-clip-text bg-linear-to-b text-transparent from-neutral-700 to-white text-center mt-20 lg:mt-30 font-extrabold font-sans">Idler AI</h1>
     </footer>
 }
