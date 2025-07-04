@@ -8,7 +8,6 @@ import {
 } from "framer-motion";
 import { MoonIcon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import HoverButton, { ButtonBorder } from "./ui/HoverButton";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
