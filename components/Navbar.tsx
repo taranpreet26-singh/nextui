@@ -49,14 +49,10 @@ export default function Navbar() {
         >
             <div className="flex  gap-4">
                 <div className="flex items-center gap-2">
-                    <Image
-                        width={25}
-                        height={25}
-                        alt="ventel-logo"
-                        src={"/images/ventel-logo.avif"}
-                    />
+                    <div className="h-5 w-6 bg-blue-900 rounded-br-lg     rounded-tr-xs rounded-tl-lg rounded-bl-xs"></div>
+
                     <h1 className="text-lg md:text-2xl font-bold text-blue-900 font-sans">
-                        Idler
+                        Every AI
                     </h1>
                 </div>
 
