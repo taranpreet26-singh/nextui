@@ -37,21 +37,21 @@ export default function Navbar() {
             animate={{
                 opacity: 1,
                 width: scrolled ? "100%" : "90%",
-                y: scrolled ? 3 : 16,
+                y: scrolled ? 0 : 16,
             }}
             transition={{ duration: 0.7, ease: easeInOut }}
             layout
-            className={`w-full flex px-4  inset-x-0 mx-auto md:px-10 items-center justify-between fixed z-10 rounded-2xl h-16 ${scrolled
-                    ? "dark:bg-black/5 bg-white/5"
-                    : "dark:bg-black/70 bg-white/70"
+            className={`w-full flex px-4  inset-x-0 mx-auto md:px-10 items-center justify-between fixed z-10  h-16 ${scrolled
+                    ? "dark:bg-black/80 bg-white/5 rounded-b-2xl"
+                    : "dark:bg-black/40 bg-white/70 rounded-2xl"
                 } drop-shadow-xl backdrop-blur-sm`}
         >
             <div className="flex  gap-4">
                 <div className="flex items-center gap-2">
-                    <div className="h-5 w-6 bg-blue-900 rounded-br-lg     rounded-tr-xs rounded-tl-lg rounded-bl-xs"></div>
+                    <div className="h-5 w-6 bg-blue-950 rounded-br-lg     rounded-tr-xs rounded-tl-lg rounded-bl-xs"></div>
 
-                    <h1 className="text-lg md:text-2xl font-bold text-blue-900 font-sans">
-                        Every AI
+                    <h1 className="text-lg md:text-2xl font-bold text-blue-950 font-sans">
+                        Misprint
                     </h1>
                 </div>
 

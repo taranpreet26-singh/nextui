@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Oswald } from "next/font/google";
 import "./globals.css";
 import NavWrapper from "@/components/wrapper/NavWrapper";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import LenisScroller from "@/lib/LenisScroll";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const oswald = Oswald({
+  variable: "--font-oswald",
   subsets: ["latin"],
+  weight: ["400", "500", "700"], 
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "EVERY AI",
@@ -29,7 +26,7 @@ export default function RootLayout({
     <html lang="en"suppressHydrationWarning >
       <body 
       
-      className={`${geistSans.variable}  transition-all duration-1000 ease-in-out dark:bg-["#171717"] bg-neutral-400 ${geistMono.variable} antialiased`}
+      className={`${oswald.variable}  transition-all duration-1000 ease-in-out dark:bg-["#171717"] bg-neutral-400 ${oswald.variable} antialiased`}
       >
         <LenisScroller>
 
