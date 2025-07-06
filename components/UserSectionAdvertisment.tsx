@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react"
 export default function UserSectionAdvertisment() {
 
     const [hovered, setHovered] = useState<boolean>(false)
+    
     return <section className="px-10 flex flex-col items-center justify-center relative lg:px-30  w-full h-full py-20 lg:py-30">
 
         <div 
@@ -38,7 +39,7 @@ export default function UserSectionAdvertisment() {
                                                 backgroundColor: hovered ? "#f6f6f6" : "#888888",
                                                 boxShadow: hovered ? "2px 2px 4px 1px rgba(225,225,225,1)" : "2px 2px 6px 1px rgba(225,225,225,0.2)"
                                             }}
-                                            transition={{ duration: 0.7, ease: easeInOut, delay: delay }}
+                                            transition={{ duration: 0.3, ease: easeInOut, delay: delay }}
                                             key={idx} className={`w-[3px] h-[3px]  rounded-full`}>
                                         </motion.div>
                                     })

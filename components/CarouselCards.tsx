@@ -102,12 +102,18 @@ export default function CarouselCard() {
                                 February 17, 2024. Your best opportunity to get these right now is by
                                 entering raffles and waiting for the official releases.
                             </p> */}
-                            <button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+                            <div className="flex  items-center mt-4 space-x-4">
+                            <button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black  text-xs font-bold dark:bg-zinc-800">
                                 <span>Buy now </span>
                                 <span className="bg-zinc-700 rounded-full text-[0.6rem] px-2 py-0 text-white">
                                     $100
                                 </span>
                             </button>
+                            <button className=" text-xs rounded-full pl-4 h-fit flex items-center text-white pr-1 space-x-1 py-1 font-bold bg-black dark:bg-zinc-800">
+                                <span className="">Sell Now</span>
+                                <span className="bg-zinc-700 rounded-full text-[0.6rem] px-2 py-0 text-white">$200</span>
+                            </button>
+                            </div>
 
                         </BackgroundGradient>
                         
@@ -115,7 +121,7 @@ export default function CarouselCard() {
             </motion.div>
         </AnimatePresence>
                 
-        <HoverButton className="mt-6 flex gap-1 group">
+        <HoverButton className="mt-16 flex gap-1 group">
                 <span>Show More</span>
                 <span className="group-hover:translate-x-1 transition-all ease-in-out duration-700"><MoveRight/></span>
         </HoverButton>

@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="flex items-start w-full  mb-4 lg:mb-0 lg:items-center gap-2">
                 <div className="h-5 w-6 bg-blue-900 rounded-br-lg     rounded-tr-xs rounded-tl-lg rounded-bl-xs"></div>
                 <h1 className="text-lg md:text-3xl font-bold text-blue-900 font-sans">
-                    EVERY AI
+                    Misprint
                 </h1>
             </div>
             <div className="grid grid-cols-3 justify-end  w-full lg:w-1/2  ">
@@ -41,7 +41,6 @@ export default function Footer() {
                 </div>
             </div>
         </div>
-
-        <h1 className="text-5xl lg:text-[14rem] bg-clip-text bg-linear-to-b text-transparent from-neutral-700 to-white text-center mt-20 lg:mt-30 font-extrabold font-sans">EVERY AI</h1>
+        <h1 className="text-5xl lg:text-[14rem] bg-clip-text bg-linear-to-b text-transparent from-neutral-700 to-white text-center mt-20 lg:mt-30 font-extrabold font-sans">Misprint</h1>
     </footer>
 }

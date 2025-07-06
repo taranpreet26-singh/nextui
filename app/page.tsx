@@ -1,9 +1,11 @@
+import BentoGrid from "@/components/BentroGrid";
 import CardsSection from "@/components/CardsSection";
 import CarouselCard from "@/components/CarouselCards";
 import CarouselSection from "@/components/CarouselSection";
 import Footer from "@/components/Footer";
 import HomeBanner from "@/components/HomeBanner";
 import ProjectSection from "@/components/ProjectSection";
+import ScreenWithImage from "@/components/ScreenWithImage";
 import SecuritySectionAds from "@/components/SecuritySectionAds";
 import UserSectionAdvertisment from "@/components/UserSectionAdvertisment";
 
@@ -16,8 +18,8 @@ export default function Home() {
       <main className="relative container mx-auto   z-[100]">
       <HomeBanner/>
       <CarouselCard/>
-      
-        {/* <ScreenWithImage /> */}
+      <BentoGrid/>
+        <ScreenWithImage />
         <CarouselSection />
         <ProjectSection />
         <CardsSection />

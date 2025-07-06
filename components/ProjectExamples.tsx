@@ -107,14 +107,17 @@ export default function ProjectFullSectionUI({
         style={{ y: translateY, opacity: opacity }}
         className="bg-neutral-700 p-3 sm:p-4 mx-auto w-full lg:w-[60%] z-[1] h-fit rounded-2xl border border-neutral-700"
       >
-        <div className="bg-white dark:bg-black w-full h-full p-3 sm:p-4 z-[2] rounded-3xl border border-neutral-700">
-          <video
-            src={`${features?.videoLink}`}
-            autoPlay
-            muted
-            playsInline
-            className="rounded-2xl w-full h-auto max-h-[70vh] border border-neutral-700 object-cover"
-          />
+        <div className="bg-white dark:bg-black w-full h-[22rem] p-3 sm:p-4 z-[2] rounded-3xl border border-neutral-700">
+            <iframe
+      width="100%"
+      height="100%"
+      src={ `${features.videoLink}&autoplay=1&mute=1`}
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      
+      className="rounded-lg object-cover"
+    ></iframe>
         </div>
       </motion.div>
     </div>
