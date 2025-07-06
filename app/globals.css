@@ -90,9 +90,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-  max-width: 1400px;
-}
 
 .card-wrapper::before {
   background: conic-gradient(transparent, white, transparent 30deg);

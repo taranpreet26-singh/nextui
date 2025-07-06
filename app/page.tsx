@@ -1,9 +1,9 @@
 import CardsSection from "@/components/CardsSection";
+import CarouselCard from "@/components/CarouselCards";
 import CarouselSection from "@/components/CarouselSection";
 import Footer from "@/components/Footer";
 import HomeBanner from "@/components/HomeBanner";
 import ProjectSection from "@/components/ProjectSection";
-import ScreenWithImage from "@/components/ScreenWithImage";
 import SecuritySectionAds from "@/components/SecuritySectionAds";
 import UserSectionAdvertisment from "@/components/UserSectionAdvertisment";
 
@@ -13,9 +13,11 @@ export default function Home() {
   return (
     <div className="relative h-screen  flex">
 
-      <main className="relative container mx-auto   z-1">
+      <main className="relative container mx-auto   z-[100]">
       <HomeBanner/>
-        <ScreenWithImage />
+      <CarouselCard/>
+      
+        {/* <ScreenWithImage /> */}
         <CarouselSection />
         <ProjectSection />
         <CardsSection />
