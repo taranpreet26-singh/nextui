@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function BentoGrid() {
-    return <section className="flex flex-col px-4 items-center gap-6  h-fit w-full lg:px-30">
+    return <section className="flex flex-col px-4  gap-6  h-fit w-full lg:px-30">
         <div className="flex flex-col items-center w-full  lg:flex-row gap-8">
             <div className="card1 group  w-[24rem]  aspect-square rounded-2xl overflow-hidden p-4 bg-zinc-800">
                 <div>
@@ -35,7 +35,7 @@ export default function BentoGrid() {
                 </div>
             </div>
         </div>
-        <div className="flex flex-col items-center lg:flex-row gap-8">
+        <div className="flex flex-col   lg:flex-row gap-8">
             <div className="card1 group  w-full lg:w-[50rem]  h-fit rounded-2xl overflow-hidden p-4 bg-zinc-800">
                 <div>
                     <h1 className="group-hover:translate-x-1 transition-all ease-in-out duration-1000 text-xl text-wrap text-white font-semibold ">Exciting New Cards that matters</h1>
