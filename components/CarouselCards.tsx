@@ -76,12 +76,12 @@ export default function CarouselCard() {
         console.log(crouselWidthRef.current?.offsetWidth)
     }, [])
 
-    return <section className="w-full   flex  flex-col items-center justify-center   h-fit p-30 ">
+    return <section className="w-full   flex  flex-col items-center justify-center px-10 lg:px-30  h-fit py-30 ">
         <AnimatePresence>
             <motion.div
                 ref={crouselWidthRef}
                 animate={{ x: 0 }}
-                className=" w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6   "
+                className="w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6   "
             >
                 {arrImage.map((element, index) => {
                     if(index <= 8)
