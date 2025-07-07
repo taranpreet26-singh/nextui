@@ -16,7 +16,7 @@ export default function Navbar() {
     const { scrollY } = useScroll();
     const [scrolled, setScrolled] = useState(true);
     const [menuOpen, setMenuOpen] = useState(false);
-    const navItems = ["Pricing", "Blog", "Contact"];
+    const navItems = ["Products", "Blog", "Contact"];
     const [hovered, setHover] = useState<number | null>(null);
 
     function handleCurrntHoverItem(index: number | null) {

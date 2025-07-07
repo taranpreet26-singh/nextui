@@ -35,7 +35,7 @@ export default function BentoGrid() {
                 </div>
             </div>
         </div>
-        <div className="flex flex-col   lg:flex-row gap-8">
+        <div className="flex flex-col items-center px-2  lg:flex-row gap-8 ">
             <div className="card1 group  w-full lg:w-[50rem]  h-fit rounded-2xl overflow-hidden p-4 bg-zinc-800">
                 <div>
                     <h1 className="group-hover:translate-x-1 transition-all ease-in-out duration-1000 text-xl text-wrap text-white font-semibold ">Exciting New Cards that matters</h1>
@@ -46,7 +46,7 @@ export default function BentoGrid() {
                     <div className="absolute inset-0 w-[90%] h-[90%] bg-cyan-500 blur-[13px] m-auto  z-[-1]"></div>
                 </div>
             </div>
-            <div className="card1 group  w-[24rem]  aspect-square rounded-2xl overflow-hidden p-4 bg-zinc-800">
+            <div className="card1 group  w-full lg:w-[24rem]  aspect-square rounded-2xl overflow-hidden p-4 bg-zinc-800">
                 <div>
                     <h1 className="group-hover:translate-x-1 transition-all ease-in-out duration-1000 text-xl text-wrap text-white font-semibold ">Exciting New Cards that matters</h1>
                     <h3 className="text-zinc-700 text-wrap text-md group-hover:translate-x-3 transition-all ease-in-out duration-1000">Our team discover insights and trends of new cards for you.</h3>
