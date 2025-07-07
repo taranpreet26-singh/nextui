@@ -48,11 +48,11 @@ export default function ScreenWithImage() {
         className="bg-neutral-700 p-2 sm:p-4 mx-auto relative top-0 w-full  z-[1] h-[42rem] rounded-2xl border border-neutral-700"
       >
         <motion.div
-         className="bg-white flex   gap-5 overflow-hidden dark:bg-black w-full h-full p-2 sm:p-4 z-[2] rounded-3xl border border-neutral-700">
+         className="bg-white flex  items-center flex-col lg:flex-row gap-5 overflow-hidden dark:bg-black w-full h-full p-2 sm:p-4 z-[2] rounded-3xl border border-neutral-700">
             <motion.div
             animate={{y:["0","-50%"]}}
             transition={{duration:100,ease:"linear",repeat:Infinity,repeatType:"loop"}}
-            className="w-fit h-max  flex flex-col  border-x-2 border-dashed border-zinc-700   p-2"
+            className="w-fit h-max flex flex-col  border-x-2 border-dashed border-zinc-700   p-2"
             >
             {
               [...arrImage,...arrImage,...arrImage,...arrImage].map((element,index)=>{
