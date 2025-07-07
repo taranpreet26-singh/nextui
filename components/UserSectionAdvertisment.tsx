@@ -12,9 +12,9 @@ export default function UserSectionAdvertisment() {
         <div 
         onMouseEnter={() => { setHovered(true) }}
         onMouseLeave={() => { setHovered(false) }}
-        className="text-center relative z-[10]   w-full h-full flex flex-col items-center  pt-14 font-sans ">
-            <h1 className="text-4xl lg:text-6xl px-4 lg:px-10 font-extrabold text-black dark:text-white">Reclaim 15 hours this week:
-                book your 30‑min demo.</h1>
+        className="text-center relative z-[10]   w-full h-[50vh] flex flex-col items-center  pt-14 font-sans ">
+            <h1 className="text-4xl lg:text-6xl px-4 lg:px-10 font-extrabold text-black dark:text-white">Ready to start selling?</h1>
+            <p className="text-sm lg:text-lg text-wrap  text-zinc-400 mt-4">Join our marketplace with industry-low fees and start selling your cards today!</p>
             <div className="flex gap-6 pt-6 items-center">
                 <ButtonBorder className="text-sm text-white px-6 py-2 ">
                     Get Started
@@ -25,7 +25,7 @@ export default function UserSectionAdvertisment() {
                 </HoverButton>
             </div>
             <div
-                className="flex absolute mx-auto  z-[-1] inset-0 gap-4  w-full h-full  rounded-2xl  overflow-hidden">
+                className="flex absolute mx-auto  z-[-1] inset-0 gap-4  w-full h-full  rounded-xl  overflow-hidden">
                 {
                     [...Array(32)].map((_, index) => {
                         return (
@@ -37,10 +37,10 @@ export default function UserSectionAdvertisment() {
                                             initial={{ backgroundColor: "#888888" }}
                                             animate={{
                                                 backgroundColor: hovered ? "#f6f6f6" : "#888888",
-                                                boxShadow: hovered ? "2px 2px 4px 1px rgba(225,225,225,1)" : "2px 2px 6px 1px rgba(225,225,225,0.2)"
+                                                boxShadow: hovered ? "2px 2px 12px 1px rgba(225,225,225,1)" : "2px 2px 6px 1px rgba(225,225,225,0.2)"
                                             }}
                                             transition={{ duration: 0.3, ease: easeInOut, delay: delay }}
-                                            key={idx} className={`w-[3px] h-[3px]  rounded-full`}>
+                                            key={idx} className={`w-[4px] aspect-square  rounded-full`}>
                                         </motion.div>
                                     })
                                 }
