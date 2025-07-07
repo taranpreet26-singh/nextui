@@ -15,7 +15,11 @@ export default function CarouselCard() {
             title: "Pikachu Portrait"
         },
         {
-            img: "/images/pikachu.jpg",
+            img: "/images/pickachu2.jpg",
+            title: "Pikachu Portrait"
+        },
+        {
+            img: "/images/chairazard.jpg",
             title: "Pikachu Portrait"
         },
         {
@@ -23,7 +27,11 @@ export default function CarouselCard() {
             title: "Pikachu Portrait"
         },
         {
-            img: "/images/pikachu.jpg",
+            img: "/images/pickachu2.jpg",
+            title: "Pikachu Portrait"
+        },
+        {
+            img: "/images/chairazard.jpg",
             title: "Pikachu Portrait"
         },
         {
@@ -31,7 +39,11 @@ export default function CarouselCard() {
             title: "Pikachu Portrait"
         },
         {
-            img: "/images/pikachu.jpg",
+            img: "/images/pickachu2.jpg",
+            title: "Pikachu Portrait"
+        },
+        {
+            img: "/images/chairazard.jpg",
             title: "Pikachu Portrait"
         },
         {
@@ -39,7 +51,11 @@ export default function CarouselCard() {
             title: "Pikachu Portrait"
         },
         {
-            img: "/images/pikachu.jpg",
+            img: "/images/pickachu2.jpg",
+            title: "Pikachu Portrait"
+        },
+        {
+            img: "/images/chairazard.jpg",
             title: "Pikachu Portrait"
         },
         {
@@ -47,7 +63,11 @@ export default function CarouselCard() {
             title: "Pikachu Portrait"
         },
         {
-            img: "/images/pikachu.jpg",
+            img: "/images/pickachu2.jpg",
+            title: "Pikachu Portrait"
+        },
+        {
+            img: "/images/chairazard.jpg",
             title: "Pikachu Portrait"
         },
         {
@@ -55,19 +75,14 @@ export default function CarouselCard() {
             title: "Pikachu Portrait"
         },
         {
-            img: "/images/pikachu.jpg",
+            img: "/images/pickachu2.jpg",
             title: "Pikachu Portrait"
         },
         {
-            img: "/images/pikachu.jpg",
+            img: "/images/chairazard.jpg",
             title: "Pikachu Portrait"
         },
-        {
-            img: "/images/pikachu.jpg",
-            title: "Pikachu Portrait"
-        },
-
-
+       
     ]
 
 
