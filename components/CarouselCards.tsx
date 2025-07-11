@@ -91,12 +91,12 @@ export default function CarouselCard() {
         console.log(crouselWidthRef.current?.offsetWidth)
     }, [])
 
-    return <section className="w-full  items-center flex  flex-col px-10    h-fit py-30 ">
+    return <section className="w-full   items-center flex  flex-col px-10 md:px-20 lg:px-30    h-fit py-30 ">
         <AnimatePresence>
             <motion.div
                 ref={crouselWidthRef}
                 animate={{ x: 0 }}
-                className="w-full h-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-6   "
+                className="w-full h-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10  xl:gap-10   "
             >
                 {arrImage.map((element, index) => {
                     if(index <= 8)
@@ -118,7 +118,7 @@ export default function CarouselCard() {
                                 entering raffles and waiting for the official releases.
                             </p> */}
                             <div className="flex flex-col gap-1 lg:justify-between  lg:flex-row lg:items-center  mt-4     ">
-                            <button className="rounded-full pl-4 pr-1 w-fit  py-1 text-white flex items-center space-x-1 bg-black  text-xs font-bold dark:bg-zinc-800">
+                            <button className="rounded-full  pl-4 pr-1 w-fit  py-1 text-white flex items-center space-x-1 bg-black  text-xs font-bold dark:bg-zinc-800">
                                 <span>Buy now </span>
                                 <span className="bg-zinc-700 rounded-full text-[0.6rem] px-2 py-0 text-white">
                                     $100
