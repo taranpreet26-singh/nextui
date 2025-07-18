@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <div className="relative px-5 lg:container mx-auto w-full h-full">
+    <div className="relative px-5 lg:container  mx-auto w-full h-full">
      <Navbar/>
      <HomeBanner/>
      <BuildInfoSection/>
