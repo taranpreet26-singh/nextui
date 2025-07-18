@@ -1,11 +1,8 @@
 import BuildInfoSection from "@/components/BuildInfoSection";
 import Feature from "@/components/Feature";
-import BentoGrid from "@/components/Feature";
 import HomeBanner from "@/components/HomeBanner";
 import InfoCardSection from "@/components/InfoCardSection";
 import Navbar from "@/components/Navbar";
-import Button from "@/components/ui/Button";
-import Image from "next/image";
 
 export default function Home() {
   return (

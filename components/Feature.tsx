@@ -2,8 +2,8 @@
 
 import Link from "next/link"
 import Button from "./ui/Button"
-import { useEffect, useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
+import React, { useEffect, useState } from "react"
+import {  motion } from "framer-motion"
 type position = {
     x: number,
     y: number
@@ -14,7 +14,7 @@ export default function Feature() {
     const [position, setPosition] = useState<position>({ x: 0, y: 0 })
     const [isHovering, setIsHovering] = useState(false);
 
-    function handleBubbleMoment(e: any) {
+    function handleBubbleMoment(e: React.MouseEvent) {
         setIsHovering(true)
         const { clientX, clientY } = e;
         const rect = e.currentTarget.getBoundingClientRect();

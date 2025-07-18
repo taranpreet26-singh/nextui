@@ -22,7 +22,7 @@ export default function HomeBanner() {
         return ()=>{
             clearInterval(interval)
         }
-    },[])
+    },[currentText])
    
     
   
