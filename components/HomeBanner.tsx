@@ -27,13 +27,13 @@ export default function HomeBanner() {
     
   
 
-    return <section className="w-full bg-black mb-20 h-fit lg:h-[90vh]">
+    return <section className="w-full  mb-20 h-fit lg:h-[90vh]">
         <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2">
             <div  className="w-full flex flex-col justify-center h-full">
                 <HomeBannerButoon className="text-xs">
                     Introducing Modern UI
                 </HomeBannerButoon>
-                <motion.span className="text-neutral-300 flex flex-col gap-3 mt-5 text-4xl  lg:text-5xl xl:text-6xl font-bold">
+                <motion.span className="text-zinc-900 dark:text-neutral-300 flex flex-col gap-3 mt-5 text-4xl  lg:text-5xl xl:text-6xl font-bold">
                     <span >Make you websites  </span>  
                     <motion.span > looks 10x {" "} 
                         {arrText.map((element,index)=>{
@@ -67,12 +67,12 @@ export default function HomeBanner() {
             <div className="w-full flex flex-col lg:flex-row items-center  h-full">
                 <div className="w-full z-1 group relative mt-10 h-fit p-[1px]  rounded-2xl ">
                     <div 
-                    className="w-full md:flex-row flex-col border-2 bg-zinc-900 border-zinc-600 rounded-2xl h-fit flex  ">
+                    className="w-full md:flex-row flex-col border-2 bg-black dark:bg-zinc-900 border-zinc-600 rounded-2xl h-fit flex  ">
                         <div className="flex items-center justify-center">
                             <Image width={400} height={100} alt="logo" className="w-[300px] lg:w-[65rem]"  src={'/images/logo.png'} />
                         </div>
                         <div className="flex flex-col p-5 lg:p-0  justify-center">
-                            <h1 className="text-2xl font-semibold">Build sleek UI faster</h1>
+                            <h1 className="text-2xl font-semibold text-white">Build sleek UI faster</h1>
                             <p className="text-sm text-neutral-400">Copy paste the most trending components and use them in your websites without having to worry about styling and animations.</p>
                         </div>
                     </div>

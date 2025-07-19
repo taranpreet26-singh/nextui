@@ -47,11 +47,11 @@ const arrCard = [
 ]
 
 export default function InfoCardSection() {
-    return <section className="w-full bg-black py-20 flex flex-col items-center min-h-fit  lg:h-[90vh]">
-        <h1 className="text-4xl font-semibold text-white lg:text-6xl ">
+    return <section className="w-full  py-20 flex flex-col items-center min-h-fit  lg:h-[90vh]">
+        <h1 className="text-4xl font-semibold text-black dark:text-white lg:text-6xl ">
             Last <span className="text-purple-500">but</span>
         </h1>
-        <h1 className="text-4xl font-semibold ml-4  text-white lg:text-6xl ">
+        <h1 className="text-4xl font-semibold ml-4 text-black dark:text-white lg:text-6xl ">
             Not <span className="text-pink-500">least.</span>
         </h1>
         <p className="mt-5 text-white/70">A fully-featured React/Next UI library.</p>
@@ -71,7 +71,7 @@ const Card = ({ logo, title, info }: { logo: JSX.Element, title: string, info: J
             <div className="bg-purple-900 rounded-full p-1 text-pink-600 ">
                 {logo}
             </div>
-            <h1 className="text-lg ">{title}</h1>
+            <h1 className="text-lg text-white">{title}</h1>
         </div>
         <div className="text-sm text-white/80 mt-4">
             {info}

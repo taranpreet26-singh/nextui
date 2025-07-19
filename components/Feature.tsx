@@ -27,7 +27,7 @@ export default function Feature() {
     useEffect(() => {
 
     }, [position])
-    return <section className="w-full bg-black flex items-center justify-center relative h-fit lg:h-[80vh] ">
+    return <section className="w-full  flex items-center justify-center relative h-fit lg:h-[80vh] ">
 
         <motion.div
             animate={{
@@ -41,25 +41,25 @@ export default function Feature() {
             className="w-full h-fit lg:w-fit lg:h-3/4 min-h-fit p-8 lg:py-20 mt-30 lg:px-30 bg-indigo-800 rounded-2xl relative">
             <motion.h1
 
-                className="text-4xl lg:text-6xl font-semibold ">Ship <span className="bg-gradient-to-r bg-clip-text text-transparent from-pink-700 via-purple-700 to-cyan-600 ">faster</span></motion.h1>
-            <h1 className="text-4xl lg:text-6xl font-semibold ">with beautiful components</h1>
+                className="text-4xl lg:text-6xl font-semibold text-white ">Ship <span className="bg-gradient-to-r bg-clip-text text-transparent from-pink-700 via-purple-700 to-cyan-600 ">faster</span></motion.h1>
+            <h1 className="text-4xl lg:text-6xl font-semibold text-white ">with beautiful components</h1>
 
             <p className="text-white/70 mt-5 text-lg">Premade templates of over 210+ beautiful and responsive components, professionally created by the team behind NextUI.</p>
 
-            <div className="flex mt-5 lg:flex-row flex-col  gap-5 items-start lg:items-center">
-                <div className="flex border-[0.4px] rounded-full px-2 border-white gap-2">
+            <div className="flex mt-5 lg:flex-row text-white flex-col text-sm  gap-5 items-start lg:items-center">
+                <div className="flex border-[0.4px] rounded-full items-center px-2 border-white gap-2">
                     <Sign />
                     <h1 className="text-md font-medium">Lifetime Access</h1>
                 </div>
-                <div className="flex border-[0.4px] rounded-full px-2 border-white gap-2">
+                <div className="flex border-[0.4px] items-center rounded-full px-2 border-white gap-2">
                     <Sign />
                     <h1 className="text-md font-medium">Free Update</h1>
                 </div>
-                <div className="flex border-[0.4px] rounded-full px-2 border-white gap-2">
+                <div className="flex border-[0.4px] items-center rounded-full px-2 border-white gap-2">
                     <Sign />
                     <h1 className="text-md font-medium">Beautiful Designed</h1>
                 </div>
-                <div className="flex border-[0.4px] rounded-full px-2 border-white gap-2">
+                <div className="flex border-[0.4px] items-center rounded-full px-2 border-white gap-2">
                     <Sign />
                     <h1 className="text-md font-medium">Typescript based</h1>
                 </div>
