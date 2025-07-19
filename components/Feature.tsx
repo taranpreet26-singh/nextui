@@ -38,7 +38,7 @@ export default function Feature() {
             onMouseMove={handleBubbleMoment}
             onMouseLeave={() => { setPosition({ x: 0, y: 0 }); setIsHovering(false) }}
 
-            className="w-full h-fit lg:w-fit lg:h-3/4 min-h-fit p-8 lg:py-20 lg:px-30 bg-indigo-800 rounded-2xl relative">
+            className="w-full h-fit lg:w-fit lg:h-3/4 min-h-fit p-8 lg:py-20 mt-30 lg:px-30 bg-indigo-800 rounded-2xl relative">
             <motion.h1
 
                 className="text-4xl lg:text-6xl font-semibold ">Ship <span className="bg-gradient-to-r bg-clip-text text-transparent from-pink-700 via-purple-700 to-cyan-600 ">faster</span></motion.h1>

@@ -41,5 +41,6 @@ export default function Footer() {
             </div>
         </div>
         <h1 className="text-5xl lg:text-[14rem] bg-clip-text bg-linear-to-b text-transparent from-neutral-700 to-white text-center mt-20 lg:mt-30 font-extrabold font-sans">Next UI</h1>
+        <div className="absolute bg-gradient-to-r from-cyan-500 to-white blur-[100px] w-3/4 h-[20%] mx-auto  inset-x-0 rounded-full bottom-0"></div>
     </footer>
 }
