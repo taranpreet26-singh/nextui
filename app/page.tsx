@@ -1,3 +1,5 @@
+"use client"
+
 import BuildInfoSection from "@/components/BuildInfoSection";
 import Feature from "@/components/Feature";
 import Footer from "@/components/Footer";
