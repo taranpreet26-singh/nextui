@@ -3,7 +3,7 @@ export default function Footer() {
     const navItems = ["Pricing", "Blog", "Contact"];
     const policies = ['Privancy Policy', 'Terms of Service']
     const socialMedia = ['Twitter', 'LinkedIn', 'GitHub']
-    return <footer className=" relative  border-neutral-700 w-full h-1/2 lg:h-full px-4 lg:px-20 py-20">
+    return <footer className=" relative bg-black  border-neutral-700 w-full h-1/2 lg:h-full px-4 lg:px-20 py-20">
         <div className="w-full h-fit flex flex-col lg:flex-row gap-6 lg:gap-40">
             <div className="flex items-start w-full  mb-4 lg:mb-0 lg:items-center gap-2">
                 <h1 className="text-lg md:text-3xl font-bold text-transparent bg-clip-text  bg-gradient-to-r from-white to-zinc-700 font-sans">

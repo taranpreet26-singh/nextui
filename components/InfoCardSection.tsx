@@ -47,7 +47,7 @@ const arrCard = [
 ]
 
 export default function InfoCardSection() {
-    return <section className="w-full py-20 flex flex-col items-center h-fit lg:h-[90vh]">
+    return <section className="w-full bg-black py-20 flex flex-col items-center h-fit lg:h-[90vh]">
         <h1 className="text-4xl font-semibold text-white lg:text-6xl ">
             Last <span className="text-purple-500">but</span>
         </h1>

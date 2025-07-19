@@ -16,7 +16,7 @@ export default function Home() {
     setTheme("dark")
   },[])
   return (
-    <div className="relative px-5 lg:px-10 lg:container  mx-auto w-full h-full">
+    <div className="relative px-5 lg:px-10 lg:container bg-black  mx-auto w-full h-full">
      <Navbar/>
      <HomeBanner/>
      <BuildInfoSection/>

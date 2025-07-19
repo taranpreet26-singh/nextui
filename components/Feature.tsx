@@ -27,7 +27,7 @@ export default function Feature() {
     useEffect(() => {
 
     }, [position])
-    return <section className="w-full flex items-center justify-center relative h-fit lg:h-[80vh] ">
+    return <section className="w-full bg-black flex items-center justify-center relative h-fit lg:h-[80vh] ">
 
         <motion.div
             animate={{

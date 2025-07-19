@@ -27,7 +27,7 @@ export default function HomeBanner() {
     
   
 
-    return <section className="w-full mb-20 h-fit lg:h-[90vh]">
+    return <section className="w-full bg-black mb-20 h-fit lg:h-[90vh]">
         <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2">
             <div  className="w-full flex flex-col justify-center h-full">
                 <HomeBannerButoon className="text-xs">
