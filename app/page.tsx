@@ -13,7 +13,7 @@ export default function Home() {
   const { setTheme } = useTheme()
 
   useEffect(()=>{
-    setTheme("light")
+    setTheme("dark")
   },[])
   return (
     <div className="relative px-5 lg:px-10 lg:container  mx-auto w-full h-full">
