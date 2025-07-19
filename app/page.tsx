@@ -4,8 +4,15 @@ import Footer from "@/components/Footer";
 import HomeBanner from "@/components/HomeBanner";
 import InfoCardSection from "@/components/InfoCardSection";
 import Navbar from "@/components/Navbar";
+import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
 export default function Home() {
+  const { setTheme } = useTheme()
+
+  useEffect(()=>{
+    setTheme("dark")
+  },[])
   return (
     <div className="relative px-5 lg:px-10 lg:container  mx-auto w-full h-full">
      <Navbar/>
