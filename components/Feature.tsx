@@ -1,19 +1,19 @@
 "use client"
 
-import Link from "next/link"
 import Button from "./ui/Button"
 import React, { useEffect, useState } from "react"
 import {  motion } from "framer-motion"
+import { useRouter } from "next/navigation"
 type position = {
     x: number,
     y: number
 }
 
-export default function Feature() {
+export default function Feature({className}:{className:string}) {
 
     const [position, setPosition] = useState<position>({ x: 0, y: 0 })
     const [isHovering, setIsHovering] = useState(false);
-
+    const router = useRouter()
     function handleBubbleMoment(e: React.MouseEvent) {
         setIsHovering(true)
         const { clientX, clientY } = e;
@@ -23,12 +23,9 @@ export default function Feature() {
         setPosition({ x, y });
         console.log(x, y)
     }
-
     useEffect(() => {
-
     }, [position])
-    return <section className="w-full  flex items-center justify-center relative h-fit lg:h-[80vh] ">
-
+    return <section className={className}>
         <motion.div
             animate={{
                 x: isHovering ? position.x : 0,
@@ -65,11 +62,9 @@ export default function Feature() {
                 </div>
             </div>
             <BackgroundBg />
-            <Link href={'/'}>
-                <Button type="secondary" className="mt-5">
+                <Button type="secondary" onClick={()=>router.push('/components')}  className="mt-5 relative z-[10] cursor-pointer">
                     Explore NextUI Galaxy
                 </Button>
-            </Link>
         </motion.div>
     </section>
 }

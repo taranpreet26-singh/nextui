@@ -28,14 +28,14 @@ export default function RootLayout({
     <html  lang="en" suppressHydrationWarning>
       <body
       
-        className={`${geistSans.variable} ${geistMono.variable}   antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}  transition-all duration-1000 ease-in-out dark:bg-black dark:text-white text-black bg-white  antialiased`}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
         >
-        <main  className="transition-all duration-1000 ease-in-out dark:bg-black dark:text-white text-black bg-white">
+        <main  >
         {children}
         </main>
         </ThemeProvider>

@@ -1,5 +1,6 @@
+
 export default function Components(){
     return <section>
-        component
+  hi there
     </section>
 }

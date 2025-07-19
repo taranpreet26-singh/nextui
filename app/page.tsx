@@ -10,17 +10,16 @@ import { useTheme } from "next-themes";
 import { useEffect } from "react";
 
 export default function Home() {
-  const { setTheme } = useTheme()
-
+  const { theme,setTheme } = useTheme()
   useEffect(()=>{
     setTheme("dark")
-  },[])
+  },[theme])
   return (
     <div className="relative px-5 lg:px-10    lg:container  mx-auto w-full h-full">
      <Navbar/>
      <HomeBanner/>
      <BuildInfoSection/>
-     <Feature/>
+     <Feature className="w-full  flex items-center justify-center relative h-fit lg:h-[80vh]"/>
      <InfoCardSection/>
      <Footer/>
      <div className="absolute h-[12rem] z-[-1] blur-[90px] w-[4rem] bg-white top-0 -left-14">

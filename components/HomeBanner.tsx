@@ -5,6 +5,7 @@ import Image from "next/image";
 import HomeBannerButoon from "./ui/HomeBannerButton";
 import {  motion, easeInOut } from "framer-motion";
 import { useEffect,  useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function HomeBanner() {
 
@@ -24,7 +25,7 @@ export default function HomeBanner() {
         }
     },[currentText])
    
-    
+    const router = useRouter()
   
 
     return <section className="w-full  mb-20 h-fit lg:h-[90vh]">
@@ -52,11 +53,11 @@ export default function HomeBanner() {
                 
                 <p className="text-sm text-white/60 pr-0  lg:pr-50 mt-5">Redefined UI building for developers. Quickly add components, themes, and responsive layouts to your app at any scale.</p>
                 <div className="flex gap-5 mt-5 items-center">
-                    <Button type="secondary" className="flex gap-2 items-center">
+                    <Button type="secondary" onClick={()=>{router.push('/components')}}  className="cursor-pointer flex gap-2 items-center">
                         Get Started
                         <ExternalLink size={15} />
                     </Button>
-                    <Button type="primary" className="flex gap-2 group items-center" >
+                    <Button type="primary" className="flex gap-2 cursor-pointer group items-center" >
                         <BookOpenText size={15} />
                         Components
                         <ChevronRight size={15} className="group-hover:translate-x-1.5 transition-all duration-700 ease-in-out" />
