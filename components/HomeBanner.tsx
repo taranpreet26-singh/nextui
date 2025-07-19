@@ -33,7 +33,7 @@ export default function HomeBanner() {
                 <HomeBannerButoon className="text-xs">
                     Introducing Modern UI
                 </HomeBannerButoon>
-                <motion.span className="text-neutral-300 flex flex-col gap-3 mt-5 text-4xl  md:text-6xl font-bold">
+                <motion.span className="text-neutral-300 flex flex-col gap-3 mt-5 text-4xl  lg:text-5xl xl:text-6xl font-bold">
                     <span >Make you websites  </span>  
                     <motion.span > looks 10x {" "} 
                         {arrText.map((element,index)=>{
