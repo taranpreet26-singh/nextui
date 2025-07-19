@@ -44,7 +44,7 @@ export default function Feature() {
                 className="text-4xl lg:text-6xl font-semibold ">Ship <span className="bg-gradient-to-r bg-clip-text text-transparent from-pink-700 via-purple-700 to-cyan-600 ">faster</span></motion.h1>
             <h1 className="text-4xl lg:text-6xl font-semibold ">with beautiful components</h1>
 
-            <p className="text-white/70 mt-5 text-lg">Premade templates of over 210+ beautiful and responsive components, professionally created by the team behind HeroUI.</p>
+            <p className="text-white/70 mt-5 text-lg">Premade templates of over 210+ beautiful and responsive components, professionally created by the team behind NextUI.</p>
 
             <div className="flex mt-5 lg:flex-row flex-col  gap-5 items-start lg:items-center">
                 <div className="flex border-[0.4px] rounded-full px-2 border-white gap-2">

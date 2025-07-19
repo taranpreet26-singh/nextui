@@ -47,7 +47,7 @@ const arrCard = [
 ]
 
 export default function InfoCardSection() {
-    return <section className="w-full  flex flex-col items-center h-fit lg:h-[90vh]">
+    return <section className="w-full py-20 flex flex-col items-center h-fit lg:h-[90vh]">
         <h1 className="text-4xl font-semibold text-white lg:text-6xl ">
             Last <span className="text-purple-500">but</span>
         </h1>
@@ -55,7 +55,7 @@ export default function InfoCardSection() {
             Not <span className="text-pink-500">least.</span>
         </h1>
         <p className="mt-5 text-white/70">A fully-featured React/Next UI library.</p>
-        <div className="mt-8  w-[90%] lg:w-full justify-between lg:justify-around   h-fit mx-auto  flex flex-wrap gap-6">
+        <div className="mt-8  w-full  px-4 lg:px-0 justify-center  h-fit mx-auto  flex flex-wrap gap-3">
             {
                 arrCard.map((element, index) => {
                     return <Card key={index} logo={element.logo} title={element.title} info={element.info} />
@@ -66,7 +66,7 @@ export default function InfoCardSection() {
 }
 
 const Card = ({ logo, title, info }: { logo: JSX.Element, title: string, info: JSX.Element }) => {
-    return <div className="p-4 w-[18rem] rounded-2xl bg-zinc-800">
+    return <div className="py-6 px-4 lg:p-4 w-full lg:w-[18rem] rounded-2xl bg-zinc-800">
         <div className="flex items-center   gap-2">
             <div className="bg-purple-900 rounded-full p-1 text-pink-600 ">
                 {logo}
