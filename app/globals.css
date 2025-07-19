@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  color-scheme: dark;
+
 }
 
 
@@ -18,8 +20,10 @@
   }
 }
 
-body{
-  background-color: #171717;
+html,
+body {
+  background-color: #000; 
+    color: white;
 }
 
 .container{
