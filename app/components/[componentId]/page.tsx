@@ -27,7 +27,7 @@ export default function Component() {
     console.log(filterOutData)
     return <div className="w-full h-full">
         {
-filterOutData.map((element, index) => {
+        filterOutData.map((element, index) => {
         return <div key={index} className="w-full  px-2 lg:px-0 h-full ">
             <motion.h1
                 className="text-3xl font-bold">{element.name.replaceAll("-"," ")}</motion.h1>

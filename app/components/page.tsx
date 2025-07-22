@@ -27,8 +27,8 @@ export default function Components(){
       }, [])
   
     return <section className="w-full h-screen">
-             <div className="mt-10 px-4 lg:px-0 ">
-                      <h1 className="text-3xl font-bold ">All Component</h1>
+             <div className="mt-10 ">
+                      <h1 className="text-3xl font-bold ">Component</h1>
                       {
                           !allComponent ? <motion.div className="w-full h-full flex items-center justify-center">
                               <motion.svg
@@ -62,7 +62,7 @@ export default function Components(){
                               >
                                   Loading, please wait...
                               </motion.p>
-                          </motion.div> : <div className="flex flex-wrap   min-h-[30rem]">
+                          </motion.div> : <div className="grid grid-cols-1 md:grid-cols-2 min-h-[30rem]">
                               {
                                   allComponent?.map((element, index) => {
                                       return <CardComponent  image={element.image} name={element.name} shortInfo={element.shortInfo} key={index} />
@@ -76,10 +76,9 @@ export default function Components(){
 
  const CardComponent = ({ image, name, shortInfo }: { image: string, name: string, shortInfo: string }) => {
     const router = useRouter()
-    return <div onClick={() => { router.push(`/components/${name.replaceAll(" ", "-")}`) }} className="w-full lg:w-[25rem] my-5 cursor-pointer  lg:m-2 p-2  h-full">
-        
-        <div className="w-full h-[20rem] rounded-lg border-[0.5px] p-2 border-neutral-800">
-          <Image src={image} className="w-full h-full object-contain" alt="component-img" width={500} height={500} />
+    return <div onClick={() => { router.push(`/components/${name.replaceAll(" ", "-")}`) }} className="w-full  group lg:w-[20rem]   h-fit  xl:w-[26rem] 2xl:w-[32rem]  my-5 cursor-pointer  lg:m-2 p-2  ">
+        <div className="w-full h-[20rem] rounded-lg border-[0.5px]   overflow-hidden p-2 border-neutral-800">
+          <Image src={image} className="w-full group-hover:scale-105 transition-all ease-in-out duration-700 h-full object-contain" alt="component-img" width={500} height={500} />
         </div>
         <div className="text-2xl font-bold p-2">{name}</div>
         <p className="text-white/80 text-sm p-2">{shortInfo}</p>

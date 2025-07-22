@@ -53,7 +53,7 @@ export default function Dashboard() {
     }
 
     const [credential, setCredential] = useState<CredentialType>({ email: "", password: "" })
-    return <section className="w-full mx-auto lg:container   h-screen ">
+    return <section className="w-full   h-screen ">
         <div className="w-full flex flex-col-reverse lg:flex-row gap-0 lg:gap-8  px-2 h-full overflow-hidden ">
             <div className="w-full h-full overflow-hidden flex items-center justify-center  relative">
                 <div className="w-full h-fit lg:block hidden  absolute left-4 top-4">
@@ -61,7 +61,7 @@ export default function Dashboard() {
                 </div>
                 <SparklesPreview />
             </div>
-            <div className="w-full rounded-2xl  overflow-hidden relative z-[10] flex flex-col lg:flex-row items-center justify-center h-full shadow-[10px_10px_10px_10px_rgba(0,0,0,0.3)]">
+            <div className="w-full rounded-2xl  overflow-hidden relative z-[10] flex flex-col lg:flex-row items-center justify-center h-full ">
                 <div className="w-full block my-5  lg:hidden h-fit  ">
                     <h1 onClick={() => router.push('/')} className="text-white transition-all ease-in-out duration-700 cursor-pointer hover:-translate-y-0.5 font-semibold  text-2xl bg-zinc-800 w-fit rounded-lg p-1">NextUI</h1>
                 </div>
@@ -87,10 +87,12 @@ export default function Dashboard() {
 
                     </div>
                 </div>
-                <GridColumns />
+
             </div>
         </div>
         <Toaster position="top-right" />
+        <div className="w-[90%] h-12 bg-gradient-to-b from-cyan-500 to-cyan-100 rounded-full absolute -top-20 inset-x-0 mx-auto blur-[100px]"></div>
+        <div className="w-[90%] h-12 bg-gradient-to-b from-cyan-500 to-cyan-100 rounded-full absolute -bottom-20 inset-x-0 mx-auto blur-[100px]"></div>
     </section>
 }
 

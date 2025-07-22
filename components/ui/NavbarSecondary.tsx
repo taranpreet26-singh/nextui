@@ -19,7 +19,7 @@ export default function NavbarSecondary({className}:{className?:string}){
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className={`${className} py-4 flex px-5 lg:px-10    lg:container  mx-auto   justify-between items-center`}>
+                className={`${className} py-4 flex    lg:container  mx-auto   justify-between items-center`}>
                <div className="flex h-full  items-center">
                 <h1 onClick={()=>router.push('/')} className="text-transparent cursor-pointer bg-clip-text font-semibold  bg-gradient-to-r dark:from-white from-black to-zinc-700 text-2xl">NextUI</h1>
                <div className="flex items-end h-full mt-1 ml-5">
@@ -39,8 +39,8 @@ export default function NavbarSecondary({className}:{className?:string}){
                 </div>
                </div>
                 <div className="flex gap-2 h-full  items-center">
-                    <Button type="primary" className="flex  items-center py-[10px] gap-2">
-                        Get Started
+                    <Button type="primary" className="flex  items-center  py-[10px] mt-1 md:mt-0 md:py-[14px] gap-2">
+                         <p className="hidden md:block">Get Started</p>
                         <ExternalLink size={15} />
                     </Button>
                 </div>

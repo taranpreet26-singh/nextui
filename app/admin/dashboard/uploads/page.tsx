@@ -109,7 +109,7 @@ export default function UploadComponent() {
         }
     }
 
-        return <section className="px-4 lg:px-20 mx-auto  lg:container max-w-full h-fit overflow-hidden">
+        return <section className="px-4   max-w-full h-fit overflow-hidden">
             <Navbar className="" />
             <div className="w-full py-20 rounded-2xl relative z-[10] flex  justify-center h-full ">
                 <div className="w-full h-full rounded-lg border-[1px] flex flex-col items-center p-4 lg:p-8 bg-black/50 backdrop-blur-xs border-neutral-800">
@@ -246,7 +246,7 @@ export default function UploadComponent() {
 
 const CardComponent = ({ image, name, shortInfo, onEdit, onDelete }: { onEdit?: () => void, onDelete?: () => void, image: string, name: string, shortInfo: string }) => {
     const router = useRouter()
-    return <div onClick={() => { router.push(`/components/${name.replaceAll(" ", "-")}`) }} className="w-full lg:w-[25rem] my-5 cursor-pointer  lg:m-4 p-2  h-full">
+    return <div onClick={() => { router.push(`/components/${name.replaceAll(" ", "-")}`) }} className="w-full lg:w-[18rem]   h-fit  xl:w-[24rem] 2xl:w-[28rem]  my-5 cursor-pointer  lg:m-2 p-2  ">
         <div onClick={(e) => { e.stopPropagation() }} className="px-2 flex items-center justify-end w-full gap-4 pb-2">
             <div onClick={onEdit} className="relative group">
                 <Pencil size={20} className="cursor-pointer" />
@@ -263,9 +263,10 @@ const CardComponent = ({ image, name, shortInfo, onEdit, onDelete }: { onEdit?: 
                 </span>
             </div>
         </div>
-        <div className="w-full h-[20rem] rounded-lg border-[0.5px] p-2 border-neutral-800">
-            <Image src={image} className="w-full h-full object-contain" alt="component-img" width={500} height={500} />
-        </div>
+        <motion.div 
+        className="w-full group h-[20rem] rounded-lg border-[0.5px] overflow-hidden p-2 border-neutral-800">
+            <Image src={image} className="w-full group-hover:scale-105 transition-all ease-in-out duration-500 h-full object-contain" alt="component-img" width={500} height={500} />
+        </motion.div>
         <div className="text-2xl font-bold p-2">{name}</div>
         <p className="text-white/80 text-sm p-2">{shortInfo}</p>
     </div>
