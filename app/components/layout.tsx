@@ -20,8 +20,8 @@ export default function ComponentLayout({ children }: { children: React.ReactNod
     const router = useRouter()
     return <section className="w-full px-5 lg:px-20 lg:container mx-auto h-[100vh]" >
         <NavbarSecondary/>
-        <div className="flex w-full h-full mt-10">
-            <div className="w-0 hidden lg:w-[20%] h-full gap-3 pt-5 lg:flex flex-col text-sm px-10 ">
+        <div className="flex w-full gap-8 h-full mt-10">
+            <div className="w-0 hidden lg:w-[20%] h-full gap-3 pt-5 lg:flex flex-col text-sm  ">
                 <h1 className="dark:text-white text-black">All Component</h1>
                 {
                     data.map((element,index)=>{
