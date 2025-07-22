@@ -51,15 +51,18 @@ export default function Dashboard() {
     }
 
     const [credential, setCredential] = useState<CredentialType>({ email: "", password: "" })
-    return <section className="w-full h-screen ">
-        <div className="w-full grid grid-cols-2  h-full overflow-hidden ">
-            <div className="w-full h-full relative">
-                <div className="w-full h-fit  absolute left-4 top-4">
+    return <section className="w-full mx-auto  lg:container h-screen ">
+        <div className="w-full flex flex-col-reverse lg:flex-row gap-0 lg:gap-8  px-2 h-full overflow-hidden ">
+            <div className="w-full h-full overflow-hidden flex items-center justify-center  relative">
+                <div className="w-full h-fit lg:block hidden  absolute left-4 top-4">
                     <h1 onClick={() => router.push('/')} className="text-white transition-all ease-in-out duration-700 cursor-pointer hover:-translate-y-0.5 font-semibold  text-2xl bg-zinc-800 w-fit rounded-lg p-1">NextUI</h1>
                 </div>
                 <SparklesPreview />
             </div>
-            <div className="w-full rounded-2xl relative z-[10] flex items-center justify-center h-full shadow-[10px_10px_10px_10px_rgba(0,0,0,0.3)]">
+            <div className="w-full rounded-2xl  overflow-hidden relative z-[10] flex flex-col lg:flex-row items-center justify-center h-full shadow-[10px_10px_10px_10px_rgba(0,0,0,0.3)]">
+                <div className="w-full block my-5  lg:hidden h-fit  ">
+                    <h1 onClick={() => router.push('/')} className="text-white transition-all ease-in-out duration-700 cursor-pointer hover:-translate-y-0.5 font-semibold  text-2xl bg-zinc-800 w-fit rounded-lg p-1">NextUI</h1>
+                </div>
                 <div className="w-fit h-fit rounded-lg border-[1px] flex flex-col items-center p-8 bg-black/50 backdrop-blur-xs border-neutral-800">
                     <h1 className="text-xl font-bold text-white">Welcome Back Admin</h1>
                     <div className="w-full mt-6 flex flex-col gap-2 h-fit">
@@ -91,9 +94,9 @@ export default function Dashboard() {
 
 
 const GridColumns = () => {
-    const columns = 41
+    const columns = 42
     const rows = 11
-    return <div className="flex bg-gray-100 absolute inset-0 z-[-1] dark:bg-neutral-900 shrink-0 flex-wrap justify-center items-center gap-x-px gap-y-px  scale-105">
+    return <div className="flex  bg-gray-100 absolute inset-0 z-[-1] dark:bg-neutral-900 shrink-0 flex-wrap justify-center items-center gap-x-px gap-y-px  scale-105">
         {
             Array.from({ length: rows }).map((_, row) =>
                 Array.from({ length: columns }).map((element, colum) => {

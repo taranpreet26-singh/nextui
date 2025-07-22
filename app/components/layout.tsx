@@ -18,7 +18,7 @@ export default function ComponentLayout({ children }: { children: React.ReactNod
     
     const [currentComponent,setComponent] = useState<string|null>(null)
     const router = useRouter()
-    return <section className="w-full h-[100vh]" >
+    return <section className="w-full lg:container mx-auto h-[100vh]" >
         <NavbarSecondary/>
         <div className="flex w-full h-full mt-10">
             <div className="w-0 hidden lg:w-[20%] h-full gap-3 pt-5 lg:flex flex-col text-sm px-14 ">

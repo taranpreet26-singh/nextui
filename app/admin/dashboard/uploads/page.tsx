@@ -98,7 +98,7 @@ export default function UploadComponent() {
             setRefresh(true)
         }
     }
-    return <section className="px-4 lg:px-10  max-w-full h-fit overflow-hidden">
+    return <section className="px-4 lg:px-10 mx-auto lg:container  max-w-full h-fit overflow-hidden">
         <Navbar className="" />
         <div className="w-full py-20 rounded-2xl relative z-[10] flex  justify-center h-full ">
             <div className="w-full h-full rounded-lg border-[1px] flex flex-col items-center p-4 lg:p-8 bg-black/50 backdrop-blur-xs border-neutral-800">
