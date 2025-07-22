@@ -28,9 +28,9 @@ export default function Component() {
     return <div className="w-full h-full">
         {
 filterOutData.map((element, index) => {
-        return <div key={index} className="w-full h-full ">
+        return <div key={index} className="w-full  px-6 lg:px-0 h-full ">
             <motion.h1
-                className="text-3xl font-bold">{element.name}</motion.h1>
+                className="text-3xl font-bold">{element.name.replaceAll("-"," ")}</motion.h1>
             <motion.p
 
                 className="text-white/70 mt-4">{element.shortInfo}</motion.p>
@@ -51,14 +51,14 @@ filterOutData.map((element, index) => {
                 }
             </div>
             {hovered.toLowerCase() === "preview" &&
-                <div className="w-3/4 h-3/4 rounded-2xl mt-8 flex items-center justify-center border-[1px] border-zinc-800">
+                <div className="w-full  lg:w-3/4  h-fit lg:h-full relative  lg:max-h-3/4  rounded-2xl overflow-hidden mt-8 flex items-center justify-center border-[1px] border-zinc-800">
                     {element.actionComponent}
                 </div>
             }
             {
                 hovered.toLowerCase() === "code" &&
                 <div className="w-full  h-fit">
-                    <div className="max-w-3/4  w-fit h-fit max-h-3/4  rounded-lg  mt-8 flex items-center justify-center border-[1px] border-zinc-800">
+                    <div className="w-full lg:w-3/4 h-fit min-h-3/4  rounded-lg  mt-8 flex items-center justify-center border-[1px] border-zinc-800">
                         <CodeBlock
                             language="tsx"
                             filename="DummyComponent.tsx"
@@ -67,12 +67,12 @@ filterOutData.map((element, index) => {
                         />
                     </div>
                     <div className="w-full h-fit mt-5">
+                       {element.installation.length > 0 &&  <h1 className="text-3xl font-bold">Installation</h1>}
                         { element.installation &&
                             element.installation.map((item, idx) => {
                                 return <div key={idx} className="w-full h-full">
-                                    <h1 className="text-3xl font-bold">Installation</h1>
                                     <motion.p className="text-white/70 mt-4">{item.info}</motion.p>
-                                    <div className="max-w-3/4 mt-5  h-fit max-h-3/4 ">
+                                    <div className="min-w-3/4 mt-5 w-full lg:w-fit   h-fit min-h-3/4 ">
                                         <CodeBlock
                                             language=".css"
                                             filename="global.css"

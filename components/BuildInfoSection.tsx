@@ -17,7 +17,7 @@ export default function BuildInfoSection(){
 
 
 
-const StarGalaxy = ()=>{
+export const StarGalaxy = ()=>{
     const randomMove = ()=>Math.random() * 10-20
     const random = ()=> Math.random()
     const randomOpcity = ()=>Math.random()
