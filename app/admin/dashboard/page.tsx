@@ -6,48 +6,49 @@ import axios from "axios"
 import { ChangeEvent, useState } from "react"
 import toast, { Toaster } from 'react-hot-toast';
 
+
+
 type CredentialType = {
     email: string,
     password: string
 }
 export default function Dashboard() {
     const router = useRouter()
-    const [loading,setLoading] = useState<string | null>(null)
-    const [correctAdmin,setAdminCorrect] = useState<boolean>(false)
+    const [loading, setLoading] = useState<string | null>(null)
+    const [correctAdmin, setAdminCorrect] = useState<boolean>(false)
     async function AdminAuthorization() {
         try {
             setLoading("Loading....")
-            if(credential.email !== "" || credential.password !== "" ){
+            if (credential.email !== "" || credential.password !== "") {
                 const response = await axios.post('/api/admin',
                     {
-                       email: credential.email,
-                       password:credential.password
+                        email: credential.email,
+                        password: credential.password
                     }
                 )
-                if(response.status === 200){
+                if (response.status === 200) {
                     toast.success(response.data.msg)
                     setAdminCorrect(true)
                     router.push('/admin/dashboard/uploads')
-                    localStorage.setItem("approved","yes")
-                }else{
+                } else {
                     toast.error(response.data.msg)
                 }
-            }else{
+            } else {
                 toast.error("Please fill all the fields")
             }
         } catch (error) {
             console.log(error)
-        }finally{
+        } finally {
             setLoading(null)
         }
     }
 
     function handleCredential(e: ChangeEvent<HTMLInputElement>) {
-        const {name,value} = e.target
-        console.log(name,value)
-        setCredential(prev=>({
+        const { name, value } = e.target
+        console.log(name, value)
+        setCredential(prev => ({
             ...prev,
-            [name]:value
+            [name]: value
         }))
     }
 
@@ -76,20 +77,20 @@ export default function Dashboard() {
                     </div>
                     <div className="mt-8 w-full h-fit flex items-center cursor-pointer justify-center hover:-translate-y-0.5 transition-all duration-1000 ease-in-out">
                         {
-                            loading === null?<ButtonBorder onClick={() => { AdminAuthorization() }} className={`px-4 py-1  text-lg font-semibold`}>
-                            Log In
-                        </ButtonBorder>:
-                        <ButtonBorder  className={`px-4 py-1 cursor-not-allowed text-lg font-semibold`}>
-                            {loading}
-                        </ButtonBorder>
+                            loading === null ? <ButtonBorder onClick={() => { AdminAuthorization() }} className={`px-4 py-1  text-lg font-semibold`}>
+                                Log In
+                            </ButtonBorder> :
+                                <ButtonBorder className={`px-4 py-1 cursor-not-allowed text-lg font-semibold`}>
+                                    {loading}
+                                </ButtonBorder>
                         }
-                        
+
                     </div>
                 </div>
                 <GridColumns />
             </div>
         </div>
-        <Toaster position="top-right"/>
+        <Toaster position="top-right" />
     </section>
 }
 
