@@ -59,18 +59,24 @@ export default function UploadComponent() {
     async function uploadComponent() {
         try {
             setLoading("Loading....")
-            if (file && name != "" && shortInfo != "") {
+            if ((file || fileUpdate) && name != "" && shortInfo != "") {
                 const formData = new FormData()
-                formData.append("file", file)
+                if (update && fileUpdate) {
+                    formData.append("stringFile", fileUpdate)
+                } else if (!update && file) {
+                    formData.append("file", file)
+                }
                 formData.append("name", name)
                 formData.append("shortInfo", shortInfo)
                 const response = await axios.post('/api/admin/uploads', formData)
                 console.log(response)
                 toast.success(response.data.msg)
             } else {
+                console.log()
                 toast.error("Please fill all the fields")
             }
         } catch (error) {
+            console.log(error)
             toast.error("Some Error Occur")
         } finally {
             setLoading(null)
@@ -233,7 +239,7 @@ export default function UploadComponent() {
 
 
 
- const CardComponent = ({ image, name, shortInfo, onEdit, onDelete }: { onEdit?: () => void, onDelete?: () => void, image: string, name: string, shortInfo: string }) => {
+const CardComponent = ({ image, name, shortInfo, onEdit, onDelete }: { onEdit?: () => void, onDelete?: () => void, image: string, name: string, shortInfo: string }) => {
     const router = useRouter()
     return <div onClick={() => { router.push(`/components/${name.replaceAll(" ", "-")}`) }} className="w-full lg:w-[25rem] my-5 cursor-pointer  lg:m-4 p-2  h-full">
         <div onClick={(e) => { e.stopPropagation() }} className="px-2 flex items-center justify-end w-full gap-4 pb-2">

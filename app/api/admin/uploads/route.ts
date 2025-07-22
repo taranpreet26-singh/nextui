@@ -10,50 +10,87 @@ export async function POST(req: NextRequest) {
         const formData = await req.formData()
         const file = formData.get('file') as File
         const name = formData.get('name')
-        const shortInfo = formData.get('shortInfo')
-
-        if (!file || typeof name !== "string" || typeof shortInfo !== "string") {
-            return NextResponse.json({ msg: "Invalid form data" }, { status: 400 });
-        }
-        const arrayBuffer = await file.arrayBuffer()
-        const buffer = Buffer.from(arrayBuffer)
-        const uploadedResponse: UploadApiResponse = await new Promise((resolve, reject) => {
-            cloudinary.uploader
+        const shortInfo = formData.get('shortInfo') 
+        const stringFile  = formData.get("stringFile") as string
+        console.log(stringFile)
+        if(file){
+            if (!file || typeof name !== "string" || typeof shortInfo !== "string") {
+                return NextResponse.json({ msg: "Invalid form data" }, { status: 400 });
+            }
+            const arrayBuffer = await file.arrayBuffer()
+            const buffer = Buffer.from(arrayBuffer)
+            const uploadedResponse: UploadApiResponse = await new Promise((resolve, reject) => {
+                cloudinary.uploader
                 .upload_stream({ resource_type: "image" }, (error, result) => {
                     if (result)
                         if (error) reject(error);
-                        else resolve(result);
+                    else resolve(result);
                 })
                 .end(buffer);
-        });
-
-        const response = await prisma.component.upsert({
-            where: {
-                name
-            },
-            update: {
-                image: uploadedResponse?.secure_url,
-                shortInfo
-            },
-            create: {
-                name: name.replaceAll(" ", "-"),
-                image: uploadedResponse?.secure_url,
-                shortInfo
-            },
-            select: {
-                id: true
+            });
+            
+            const response = await prisma.component.upsert({
+                where: {
+                    name
+                },
+                update: {
+                    image: uploadedResponse?.secure_url,
+                    shortInfo
+                },
+                create: {
+                    name: name.replaceAll(" ", "-"),
+                    image: uploadedResponse?.secure_url,
+                    shortInfo
+                },
+                select: {
+                    id: true
+                }
+            })
+            if (response.id) {
+                return NextResponse.json({
+                    status: 200,
+                    msg: `${name} Uploaded`
+                })
+            } else {
+                return NextResponse.json({
+                    status: 401,
+                    msg: "Process hung Or Server Error"
+                })
             }
-        })
-        if (response.id) {
-            return NextResponse.json({
-                status: 200,
-                msg: `${name} Uploaded`
+        }else{
+            if (!stringFile || typeof name !== "string" || typeof shortInfo !== "string") {
+                return NextResponse.json({ msg: "Invalid form data" }, { status: 400 });
+            }
+            
+            
+            const response = await prisma.component.upsert({
+                where: {
+                    name
+                },
+                update: {
+                    image: stringFile,
+                    shortInfo
+                },
+                create: {
+                    name: name.replaceAll(" ", "-"),
+                    image: stringFile,
+                    shortInfo
+                },
+                select: {
+                    id: true
+                }
             })
-        } else {
-            return NextResponse.json({
-                status: 401,
-                msg: "Process hung Or Server Error"
-            })
+            if (response.id) {
+                return NextResponse.json({
+                    status: 200,
+                    msg: `${name} Uploaded`
+                })
+            } else {
+                return NextResponse.json({
+                    status: 401,
+                    msg: "Process hung Or Server Error"
+                })
+            }
         }
     } catch (error) {
         console.log(error)
