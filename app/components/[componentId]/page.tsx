@@ -28,7 +28,7 @@ export default function Component() {
     return <div className="w-full h-full">
         {
 filterOutData.map((element, index) => {
-        return <div key={index} className="w-full  px-6 lg:px-0 h-full ">
+        return <div key={index} className="w-full  px-2 lg:px-0 h-full ">
             <motion.h1
                 className="text-3xl font-bold">{element.name.replaceAll("-"," ")}</motion.h1>
             <motion.p
@@ -51,14 +51,14 @@ filterOutData.map((element, index) => {
                 }
             </div>
             {hovered.toLowerCase() === "preview" &&
-                <div className={`w-full  lg:w-3/4  h-fit lg:${element.height} relative    rounded-2xl overflow-hidden mt-8 flex items-center justify-center border-[1px] border-zinc-800`}>
+                <div className={`w-full  lg:w-3/4  ${element.height} relative    rounded-2xl overflow-hidden mt-8 flex items-center justify-center border-[1px] border-zinc-800`}>
                     {element.actionComponent}
                 </div>
             }
             {
                 hovered.toLowerCase() === "code" &&
                 <div className="w-full  h-fit">
-                    <div className="w-full lg:w-3/4 h-fit min-h-3/4  rounded-lg  mt-8 flex items-center justify-center border-[1px] border-zinc-800">
+                    <div className="w-full lg:w-3/4 h-fit   rounded-lg  mt-8 flex items-center justify-center border-[1px] border-zinc-800">
                         <CodeBlock
                             language="tsx"
                             filename="DummyComponent.tsx"

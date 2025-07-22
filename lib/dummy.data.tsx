@@ -203,7 +203,7 @@ export function cn(...inputs: ClassValue[]) {
   },
   {
     name: "HomeBannerStripes",
-    height:"h-full",
+    height:"h-3/4 lg:h-full",
     shortInfo: "A Home Banner which have stripes with mask effect too, engaging UI and design",
     codeOnlyComponent: `import { ArrowRight } from "lucide-react";
 import HomeBannerButton from "./ui/HomeBannerButton";
