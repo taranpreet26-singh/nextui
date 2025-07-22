@@ -62,7 +62,7 @@ export default function Components(){
                               >
                                   Loading, please wait...
                               </motion.p>
-                          </motion.div> : <div className="flex flex-wrap gap-8   min-h-[30rem]">
+                          </motion.div> : <div className="flex flex-wrap   min-h-[30rem]">
                               {
                                   allComponent?.map((element, index) => {
                                       return <CardComponent  image={element.image} name={element.name} shortInfo={element.shortInfo} key={index} />
@@ -70,8 +70,6 @@ export default function Components(){
                               }
                           </div>
                       }
-          
-          
                   </div>
     </section>
 }

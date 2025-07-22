@@ -51,7 +51,7 @@ filterOutData.map((element, index) => {
                 }
             </div>
             {hovered.toLowerCase() === "preview" &&
-                <div className="w-full  lg:w-3/4  h-fit lg:h-full relative  lg:max-h-3/4  rounded-2xl overflow-hidden mt-8 flex items-center justify-center border-[1px] border-zinc-800">
+                <div className={`w-full  lg:w-3/4  h-fit lg:h-full relative  lg:${element.height?"max-h-full":"max-h-[80%]"}  rounded-2xl overflow-hidden mt-8 flex items-center justify-center border-[1px] border-zinc-800`}>
                     {element.actionComponent}
                 </div>
             }

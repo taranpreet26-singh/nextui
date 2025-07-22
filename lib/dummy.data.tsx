@@ -883,6 +883,7 @@ export function cn(...inputs: ClassValue[]) {
   },
   {
     name: "Features-Section",
+    height:"h-full",
     shortInfo: "A simple hover effect",
     codeOnlyComponent: `import { cn } from "@/lib/utils";
 import {

@@ -51,6 +51,8 @@ export default function UploadComponent() {
         }
     }
 
+    const router = useRouter()
+
     useEffect(() => {
         fetchAllComponent()
     }, [refresh])
@@ -104,7 +106,10 @@ export default function UploadComponent() {
             setRefresh(true)
         }
     }
-    return <section className="px-4 lg:px-10 mx-auto lg:container  max-w-full h-fit overflow-hidden">
+
+    if(localStorage.getItem("approved")){
+
+        return <section className="px-4 lg:px-20 mx-auto  max-w-full h-fit overflow-hidden">
         <Navbar className="" />
         <div className="w-full py-20 rounded-2xl relative z-[10] flex  justify-center h-full ">
             <div className="w-full h-full rounded-lg border-[1px] flex flex-col items-center p-4 lg:p-8 bg-black/50 backdrop-blur-xs border-neutral-800">
@@ -131,7 +136,7 @@ export default function UploadComponent() {
                             <div className="h-full w-full flex items-center justify-center ">
                                 {
                                     file ?
-                                        <div className="w-3/4 h-fit flex">
+                                    <div className="w-3/4 h-fit flex">
                                             <div className="w-full h-fit rounded-sm overflow-hidden bg-white">
                                                 <Image width={100} height={100} alt={file.name} className="w-full h-full object-contain" src={URL.createObjectURL(file)} />
                                             </div>
@@ -155,8 +160,8 @@ export default function UploadComponent() {
                             <label htmlFor="name" className="text-lg font-semibold ">Name</label>
                             {
                                 update ?
-                                    <input type="text" name="name" id="name" value={name} disabled onChange={(e) => { setName(e.target.value) }} className="border-[0.5px] p-1 cursor-not-allowed  border-neutral-800 rounded-sm bg-transparent text-white" />
-                                    :
+                                <input type="text" name="name" id="name" value={name} disabled onChange={(e) => { setName(e.target.value) }} className="border-[0.5px] p-1 cursor-not-allowed  border-neutral-800 rounded-sm bg-transparent text-white" />
+                                :
                                     <input type="text" name="name" id="name" value={name} onChange={(e) => { setName(e.target.value) }} className="border-[0.5px] p-1  border-neutral-800 rounded-sm bg-transparent text-white" />
                             }
                         </div>
@@ -202,7 +207,7 @@ export default function UploadComponent() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         className="icon-tabler-loader animate-spin"
-                    >
+                        >
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M12 6l0 -3" />
                         <path d="M16.25 7.75l2.15 -2.15" />
@@ -219,7 +224,7 @@ export default function UploadComponent() {
                         animate={{ opacity: 1 }}
                         transition={{ repeat: Infinity, duration: 1.5, repeatType: "reverse" }}
                         className="text-lg font-medium tracking-wide"
-                    >
+                        >
                         Loading, please wait...
                     </motion.p>
                 </motion.div> : <div className="grid grid-cols-1  md:grid-cols-2  lg:grid-cols-3  min-h-[30rem]">
@@ -235,6 +240,42 @@ export default function UploadComponent() {
         </div>
         <Toaster position="top-right" />
     </section>
+    }else{
+      router.push("/admin/dashboard")  
+      return <motion.div className="w-full h-screen flex items-center justify-center">
+                    <motion.svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="64"
+                        height="64"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="icon-tabler-loader animate-spin"
+                        >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 6l0 -3" />
+                        <path d="M16.25 7.75l2.15 -2.15" />
+                        <path d="M18 12l3 0" />
+                        <path d="M16.25 16.25l2.15 2.15" />
+                        <path d="M12 18l0 3" />
+                        <path d="M7.75 16.25l-2.15 2.15" />
+                        <path d="M6 12l-3 0" />
+                        <path d="M7.75 7.75l-2.15 -2.15" />
+                    </motion.svg>
+
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ repeat: Infinity, duration: 1.5, repeatType: "reverse" }}
+                        className="text-lg font-medium tracking-wide"
+                        >
+                        Loading, please wait...
+                    </motion.p>
+                </motion.div>
+    } 
 }
 
 

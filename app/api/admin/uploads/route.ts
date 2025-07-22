@@ -104,7 +104,11 @@ export async function POST(req: NextRequest) {
 
 export async function GET(req: NextRequest) {
     try {
-        const response = await prisma.component.findMany()
+        const response = await prisma.component.findMany({
+            orderBy:{
+                name:"asc"
+            }
+        })
         return NextResponse.json({
             status: 200,
             msg: response

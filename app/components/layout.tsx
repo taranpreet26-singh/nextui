@@ -21,7 +21,7 @@ export default function ComponentLayout({ children }: { children: React.ReactNod
     return <section className="w-full lg:container mx-auto h-[100vh]" >
         <NavbarSecondary/>
         <div className="flex w-full h-full mt-10">
-            <div className="w-0 hidden lg:w-[20%] h-full gap-3 pt-5 lg:flex flex-col text-sm px-14 ">
+            <div className="w-0 hidden lg:w-[20%] h-full gap-3 pt-5 lg:flex flex-col text-sm px-10 ">
                 <h1 className="dark:text-white text-black">All Component</h1>
                 {
                     data.map((element,index)=>{
@@ -36,7 +36,7 @@ export default function ComponentLayout({ children }: { children: React.ReactNod
                     })
                 }
             </div>
-            <div className="w-full  lg:w-[80%] h-full">
+            <div className="w-full  lg:w-[80%]  h-full">
                 {children}
             </div>
         </div>
