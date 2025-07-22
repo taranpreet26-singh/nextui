@@ -53,7 +53,7 @@ export default function Dashboard() {
     }
 
     const [credential, setCredential] = useState<CredentialType>({ email: "", password: "" })
-    return <section className="w-full mx-auto   h-screen ">
+    return <section className="w-full mx-auto lg:container   h-screen ">
         <div className="w-full flex flex-col-reverse lg:flex-row gap-0 lg:gap-8  px-2 h-full overflow-hidden ">
             <div className="w-full h-full overflow-hidden flex items-center justify-center  relative">
                 <div className="w-full h-fit lg:block hidden  absolute left-4 top-4">
