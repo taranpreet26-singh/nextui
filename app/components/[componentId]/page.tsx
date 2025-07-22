@@ -51,7 +51,7 @@ export default function Component() {
                 }
             </div>
             {hovered.toLowerCase() === "preview" &&
-                <div className={`w-full  lg:w-3/4  ${element.height} relative    rounded-2xl overflow-hidden mt-8 flex items-center justify-center border-[1px] border-zinc-800`}>
+                <div className={`${element.width} ${element.height} relative    rounded-2xl overflow-hidden mt-8 flex items-center justify-center border-[1px] border-zinc-800`}>
                     {element.actionComponent}
                 </div>
             }

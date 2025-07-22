@@ -12,6 +12,7 @@ import HomeBannerStrike from "@/components/ui/HomeBannerStrike";
 export const data = [
   {
     name: "HomeBanner-Button",
+    width:"w-3/4",
     height:"h-3/4",
     shortInfo: "A professional-looking, engaging button with animated borders and hover effects, styled with Tailwind CSS for modern CTAs.",
     codeOnlyComponent: `const HomeBannerButton = () => {
@@ -54,7 +55,8 @@ export const data = [
   },
   {
     name: "Gradient-Hover-Button",
-        height:"h-3/4",
+    height:"h-3/4",
+    width:"w-3/4",
     shortInfo: "A vibrant button with a gradient background and dynamic hover effects, perfect for engaging CTAs.",
     codeOnlyComponent: `import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -85,6 +87,7 @@ const GradientHoverButton = () => {
   {
     name: "Text-Flip-Stagger",
     height:"h-3/4",
+    width:"w-3/4",
     shortInfo: "A component that flips through a list of words",
     codeOnlyComponent: `"use client";
     import React, { useCallback, useEffect, useState } from "react";
@@ -203,7 +206,8 @@ export function cn(...inputs: ClassValue[]) {
   },
   {
     name: "HomeBannerStripes",
-    height:"h-3/4 lg:h-full",
+    height:"h-full",
+    width:"w-full",
     shortInfo: "A Home Banner which have stripes with mask effect too, engaging UI and design",
     codeOnlyComponent: `import { ArrowRight } from "lucide-react";
 import HomeBannerButton from "./ui/HomeBannerButton";
@@ -289,6 +293,7 @@ to-transparent"></div>
   {
     name: "HomeBannerStrike",
     height:"h-full",
+    width:"w-full",
     shortInfo: "A Home Banner which have Digital or Robotic feeling UI, suitable for Digital website",
     codeOnlyComponent: `"use client"
     
@@ -757,6 +762,7 @@ to-transparent"></div>
   },
   {
     name: "Layout-Grid",
+    width:"w-full h-3/4",
     shortInfo: "A layout effect that animates the grid item on click, powered by framer motion layout",
     codeOnlyComponent: `"use client";
     import React, { JSX, useState } from "react";
@@ -1007,6 +1013,7 @@ const Feature = ({
   {
     name: "Sparkles-Stars",
     height:"h-3/4",
+    width:"w-full",
     shortInfo: "A sparkling component",
     codeOnlyComponent: `"use client"
 
@@ -1062,6 +1069,7 @@ const MemoStarGalaxy = memo(StarGalaxy)
   {
     name: "Brutal-Button",
     height:"h-3/4",
+    width:"w-3/4",
     shortInfo: "A button with shadow appears like a Box",
     codeOnlyComponent: `export function BoxButton(){
       return <button className="px-8 py-0.5  border-2 border-black dark:border-white uppercase bg-white text-black transition duration-200 text-sm shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] ">
@@ -1075,6 +1083,7 @@ const MemoStarGalaxy = memo(StarGalaxy)
   {
     name: "Grid-Columns",
     height:"h-3/4",
+    width:"w-3/4",
     shortInfo: "A unique Grid columns , can be used as background",
     codeOnlyComponent: `
 export  const GridColumns = () => {
@@ -1221,6 +1230,7 @@ export  const GridColumns = () => {
 `,
     actionComponent: <CardHoverEffectDemo />,
     height:"h-fit",
+    width:"w-full",
     installation: [
       {
         info:"Install dependencies",
