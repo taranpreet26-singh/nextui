@@ -2,14 +2,14 @@
 
 import Button from "./ui/Button"
 import React, { useEffect, useState } from "react"
-import {  motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { useRouter } from "next/navigation"
 type position = {
     x: number,
     y: number
 }
 
-export default function Feature({className}:{className:string}) {
+export default function Feature({ className }: { className: string }) {
 
     const [position, setPosition] = useState<position>({ x: 0, y: 0 })
     const [isHovering, setIsHovering] = useState(false);
@@ -18,8 +18,8 @@ export default function Feature({className}:{className:string}) {
         setIsHovering(true)
         const { clientX, clientY } = e;
         const rect = e.currentTarget.getBoundingClientRect();
-        const x = (clientX - (rect.left + rect.width / 2)) / 60;
-        const y = (clientY - (rect.top + rect.height / 2)) / 60;
+        const x = (clientX - (rect.left + rect.width / 2)) / 20;
+        const y = (clientY - (rect.top + rect.height / 2)) / 20;
         setPosition({ x, y });
         console.log(x, y)
     }
@@ -27,15 +27,16 @@ export default function Feature({className}:{className:string}) {
     }, [position])
     return <section className={className}>
         <motion.div
-            animate={{
-                x: isHovering ? position.x : 0,
-                y: isHovering ? position.y : 0
+            style={{
+                transform: isHovering
+                    ? `translate3d(${-position.x}px, ${-position.y}px, 0) scale3d(1.03, 1.03, 1)`
+                    : "translate3d(0px, 0px, 0) scale3d(1, 1, 1)",
+                transition: "transform 0.1s ease-out"
             }}
-            transition={{ type: "spring", stiffness: 100, damping: 15 }}
             onMouseMove={handleBubbleMoment}
             onMouseLeave={() => { setPosition({ x: 0, y: 0 }); setIsHovering(false) }}
 
-            className="w-full h-fit lg:w-fit lg:h-3/4 min-h-fit p-8 lg:py-20 mt-30 lg:px-30 bg-indigo-800 rounded-2xl relative">
+            className="w-full perspective-[750px] h-fit lg:w-fit lg:h-3/4 min-h-fit p-8 lg:py-20 mt-30 lg:px-30 bg-indigo-800 rounded-2xl relative">
             <motion.h1
 
                 className="text-4xl lg:text-6xl font-semibold text-white ">Ship <span className="bg-gradient-to-r bg-clip-text text-transparent from-pink-700 via-purple-700 to-cyan-600 ">faster</span></motion.h1>
@@ -62,9 +63,9 @@ export default function Feature({className}:{className:string}) {
                 </div>
             </div>
             <BackgroundBg />
-                <Button type="secondary" onClick={()=>router.push('/components')}  className="mt-5 relative z-[10] cursor-pointer">
-                    Explore NextUI Galaxy
-                </Button>
+            <Button type="secondary" onClick={() => router.push('/components')} className="mt-5 relative z-[10] cursor-pointer">
+                Explore NextUI Galaxy
+            </Button>
         </motion.div>
     </section>
 }
